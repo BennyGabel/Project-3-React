@@ -1,4 +1,5 @@
-const db = require('../../config/connection');
+// const db = require('../../config/connection');
+const db = require('../config/connection');
 const { Greene, Users } = require('../models');
 
 const inventory = require('./items.json');
