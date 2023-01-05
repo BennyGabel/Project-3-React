@@ -6,6 +6,11 @@ const resolvers = {
             return Greene.find().sort({ name: 1 });   // [1] Ascending  [-1] Descending
         }
     },
+    Query: {
+        reviews: async() => {
+            return Reviews.find().sort({itemcode: 1,createdAt: -1})
+        }
+    },
 
     // ***  Don't forget to add a comma in line 8 if another function is added ***
 
@@ -15,8 +20,11 @@ const resolvers = {
 
     Mutation: {
         // reduceOH = reduce On Hand - after inventory is sold
-        reduceOH: async (parent, {name, brand}) => {
-            return Greene.create({ name, brand });
+        reduceOH: async (parent, {itemcode, inventory}) => {
+            return Greene.findByIdAndUpdate({ inventory });
+        },
+        addComment: async (parent, {comment, email, itemcode}) => {
+            return Reviews.create({comment, email, itemcode})
         }
 
         /*
