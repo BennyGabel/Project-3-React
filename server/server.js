@@ -7,7 +7,7 @@ const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-const activity = 'Greene Shop'
+// const activity = 'Greene Shop'
 
 const server = new ApolloServer({
   typeDefs,
@@ -20,33 +20,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-
-/* // [BG] BEG -comment  out
-app.get('/all-users', (req, res) => {
-  Users.find({}, (err, result) => {
-    if (err) {
-      res.status(500).send({ message: 'Internal Server Error' });
-    } else {
-      res.status(200).json(result);
-    }
-  });
-});
-
-app.get('/all-items', (req, res) => {
-  Greene.find({}, (err, result) => {
-    if (err) {
-      res.status(500).send({ message: 'Internal Server Error' });
-    } else {
-      res.status(200).json(result);
-    }
-  });
-});
-*/ // [BG] END -  comment  out
-//
-
-
-
-// app.use(routes);
 
 
 app.get('/', (req, res) => {
@@ -71,12 +44,3 @@ const startApolloServer = async (typeDefs, resolvers) => {
 // Call the async function to start the server
 startApolloServer(typeDefs, resolvers);
 
-
-
-
-db.once('open', () => {
-  app.listen(PORT, () => {
-    // console.log(`API server for ${activity} running on port ${PORT}!`);
-    console.log(`API server for ${activity} running on port ${PORT}!`);
-  });
-});

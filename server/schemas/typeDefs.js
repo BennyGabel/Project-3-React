@@ -2,19 +2,21 @@ const { gql } = require('apollo-server-express');
 
 // docs  https://graphql.org/learn/queries/
 
-const gqlDefs = gql`
-  type --- {
+const typeDefs = gql`
+  type greenes {
     _id: ID
-    --: String
-    --: String
-    --: String
-    --: [Comment]!
+    name: String
+    brand: String
+    price: String
+    inventory: Number
+    comments: [Comment]!
   }
 
-  type Comment {
+  type users {
     _id: ID
-    --: String
-    --: String
+    email: String
+    password: String
+    comments: [Comment]!
   }
 
   type Query {
@@ -34,4 +36,4 @@ const gqlDefs = gql`
   }
 `;
 
-module.exports = gqlDefs;
+module.exports = typeDefs;

@@ -1,4 +1,4 @@
-const gqlDefs = require('./gqlDefs');
+const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 
-module.exports = { gqlDefs, resolvers };
+module.exports = { typeDefs, resolvers };
