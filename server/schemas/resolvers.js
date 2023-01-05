@@ -1,4 +1,4 @@
-const { Greene, Users }= require('../models');
+const { Greene, Reviews, Users }= require('../models');
 
 const resolvers = {
     Query: {
