@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Greene = require('./Greene');
 // const mongoose = require('mongoose');
 // const connection = require('../../config/connection');
 // const users = require('../seed/users.json');
@@ -14,6 +15,7 @@ const UserSchema = new Schema(
     email:    { type: String, required: true },    // Configure individual properties using Schema Types 
     password: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
     // Use built in date method to get current date
+    comment: [{type: Schema.Types.ObjectId, ref: 'Greene'}],
     lastAccessed: { type: Date, default: Date.now },
   }
   // {

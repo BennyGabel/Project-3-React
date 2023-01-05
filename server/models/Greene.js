@@ -15,8 +15,8 @@ const { Schema, model } = require('mongoose');
       image: String,  // capsules/liquid.. 
       inventory: Number,
       category: String,
-      // Use built in date method to get current date
-      lastAccessed: { type: Date, default: Date.now },
+      comments: [{ type: Schema.Types.ObjectId, ref: 'Users' }],
+      lastAccessed: { type: Date, default: Date.now } // Use built in date method to get current date
     }
 );
 
