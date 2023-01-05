@@ -11,6 +11,11 @@ const resolvers = {
             return Reviews.find().sort({itemcode: 1,createdAt: -1})
         }
     },
+    Query: {
+        users: async() => {
+            return Users.find().sort({email: 1})
+        }
+    },
 
     // ***  Don't forget to add a comma in line 8 if another function is added ***
 
@@ -25,6 +30,9 @@ const resolvers = {
         },
         addComment: async (parent, {comment, email, itemcode}) => {
             return Reviews.create({comment, email, itemcode})
+        },
+        addUser: async (parent, {email, password}) => {
+            return Users.create({email, password})
         }
 
         /*

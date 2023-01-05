@@ -17,11 +17,32 @@ db.once('open', async () => {
   //  await Users.insertMany(userData);
   //  await Reviews.insertMany(reviewsData);
 
-  const greene = await Greene.insertMany(inventory);
+  const greenes = await Greene.insertMany(inventory);
   const users  = await Users.insertMany(usersData);
   const reviews = await Users.insertMany(reviewsData);
 
   
+
+  /*
+//  for (newItem of greenes) {
+    // randomly add each class to a school
+    const tempGreene = greene[Math.floor(Math.random() * greenes.length)];
+    tempGreene.push(tempGreene._id);
+    await tempGreene.save();
+
+    // randomly add a professor to each class
+    const tempUsers = users[Math.floor(Math.random() * users.length)];
+    newUsers.professor = tempUsers._id;
+    await tempUsers.save();
+
+    // reference class on professor model, too
+    tempProfessor.classes.push(newClass._id);
+    await tempProfessor.save();
+  // }
+*/
+
+
+
   
     console.log('all done!');
     process.exit(0);

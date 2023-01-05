@@ -9,7 +9,7 @@ const typeDefs = gql`
     brand: String
     price: String
     inventory: Number
-    comments: [Comment]!
+    reviews: [Comment]!
   }
 
   type users {
