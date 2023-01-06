@@ -2,7 +2,7 @@
 const db = require('../config/connection');
 const { Greene, Users, Reviews } = require('../models');
 
-const inventory = require('./itemsTest.json');
+const inventory = require('./items.json');
 const userData = require('./users.json');
 const reviewsData = require('./reviews.json');
 
