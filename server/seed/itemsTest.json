@@ -1,7 +1,7 @@
 [
-    {"_id":"63b78c7b5089b8a977477a45","itemcode":"VS-3451_2022754","name":"Brain Sharp","brand":"Vitamin Shoppe","image":"brainsharp.jpg","price":37.99,"inventory":6,"category":"Brain and Memory"},
+    {"_id":"","itemcode":"VS-3451_2022754","name":"Brain Sharp","brand":"Vitamin Shoppe","image":"brainsharp.jpg","price":37.99,"inventory":6,"category":"Brain and Memory"},
     {"_id":"63b78c81ed4e72bad0b49123","itemcode":"UX-1057_1787449","name":"Neuro-Mag - Magnesium L-Threonate","brand":"Life Extension","image":"neuromag.jpg","price":44.99,"inventory":11,"category":"Brain and Memory"},
-    {"_id":"63b78c85437fa83dfab27d0b","itemcode":"VS-1526_1051389","name":"Acetyl-L-Carnitine","brand":"Vitamin Shoppe","image":"acetylcarnitine.jpg","price":24.99,"inventory":8,"category":"Brain and Memory"},
+    {"_id":"","itemcode":"VS-1526_1051389","name":"Acetyl-L-Carnitine","brand":"Vitamin Shoppe","image":"acetylcarnitine.jpg","price":24.99,"inventory":8,"category":"Brain and Memory"},
     {"_id":"63b78c89249beb96af034e70","itemcode":"UX-1002_1624428","name":"Cognitex Elite","brand":"Life Extension","image":"cognitex.jpg","price":49.99,"inventory":3,"category":"Brain and Memory"},
     {"_id":"63b78c8fafed4b9ab3c73aaf","itemcode":"ONN1001_1991041","name":"Alpha Brain","brand":"Onnit Labs","image":"alphabrain.jpg","price":34.99,"inventory":16,"category":"Brain and Memory"}
 ]
