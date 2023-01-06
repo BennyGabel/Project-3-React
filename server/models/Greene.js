@@ -7,7 +7,7 @@ const { Schema, model } = require('mongoose');
 // const GreeneSchema = new mongoose.Schema({
   const GreeneSchema = new Schema(
     {
-      id: {type: Number, required: true },
+      // id: {type: Number, required: true },
       name: { type: String, required: true },    // Configure individual properties using Schema Types 
       brand: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
       price: {type: Number, required: true },

@@ -34,7 +34,7 @@
     {"id":33,"itemcode":"VS-3836_2187136","name":"L-Theanine","brand":"Vitamin Shoppe","image":"l_theanine.jpg","price":44.99,"inventory":12,"category":"Sleep and Mood"},
     {"id":34,"itemcode":"VS-2659_1721133","name":"Sam-e","brand":"Vitamin Shoppe","image":"sam-e.jpg","price":46.99,"inventory":12,"category":"Sleep and Mood"},
     {"id":35,"itemcode":"NO-1019_1772144","name":"5-HTP Time Release","brand":"Natrol","image":"5-htp_time_rel.jpg","price":19.99,"inventory":23,"category":"Sleep and Mood"},
-    {"id":36,"itemcode":"GNX1011_2172815","name":"Stress Relief","brand":"Genexa","image":"stress_relief_homeopath.jpg","price":16.48,"inventory":3,"category":"Sleep and Mood"},
+    {"id":36,"itemcode":"GNX1011_2172815","name":"Stress Relief","brand":"Genexa","image":"stress_relief_homeopath.jpg","price":16.48,"inventory":3,"category":"Sleep and Mood"}
 ]
 
 
