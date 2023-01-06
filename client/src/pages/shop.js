@@ -31,8 +31,7 @@ const Shop = () => {
   const shopItems = shopDropSelector;
 
   return (
-    <div>
-      {/* <div id='category-drop-menu'>{shopItems}</div> */}
+<div className='react-container'>
     <div id='dropMenu-container'>
       <div className= 'dropMenu-size'>
         <input id='search-items'></input>
@@ -48,7 +47,6 @@ const Shop = () => {
       </div>
     </div>
 
-    {/* { */}
       <div className="flex-row">
         {/* repos && repos.map((item) =>  */}
         {ITEMS && ITEMS.map((item) =>
@@ -65,10 +63,8 @@ const Shop = () => {
               </div>
             </div>
           </div>
-          )
-        }
+          )}
        </div>
-    {/* }   */}
     </div>
     )
 }

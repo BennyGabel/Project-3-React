@@ -6,15 +6,12 @@ const Home = () => {
 
 
   return (
-    <div>
-   { 
-     <div>  
+
+  <div className='react-container'> 
       Home Landing Page
-   </div>
-  }
-    </div>
+  </div>
   
-    )
+  );
 }
 
 // Export Function 
