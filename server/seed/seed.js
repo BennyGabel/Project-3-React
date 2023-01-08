@@ -2,7 +2,7 @@
 const db = require('../config/connection');
 const { Greene, Users, Reviews } = require('../models');
 
-const inventory = require('./itemsTest.json');
+const inventory = require('./items.json');
 const userData = require('./users.json');
 const reviewsData = require('./reviews.json');
 
@@ -16,10 +16,10 @@ db.once('open', async () => {
   //  await Greene.insertMany(inventory);
   //  await Users.insertMany(userData);
   //  await Reviews.insertMany(reviewsData);
-  const reviews = await Reviews.insertMany(reviewsData);
+
   const greenes = await Greene.insertMany(inventory);
   const users  = await Users.insertMany(userData);
-
+  const reviews = await Reviews.insertMany(reviewsData);
 
   
 // const randGrn = Greene.findOne({});

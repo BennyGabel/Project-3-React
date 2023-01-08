@@ -36,8 +36,8 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
-          <Navbar show_screen={pageSelect} set_screen={setShop}/>      
                <Routes>
+                  <Navbar show_screen={pageSelect} set_screen={setShop}/>   
                  {<Render/>}
                 </Routes>
               <Footer/>
