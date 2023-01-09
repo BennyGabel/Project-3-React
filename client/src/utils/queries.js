@@ -2,14 +2,17 @@ import { gql } from '@apollo/client';
 
 export const QUERY_ITEMS_ALL = gql`
   query allItems {
-    itemcode {
+    greenes {
       _id
-      itemcode
       name
       brand
       price
+      itemcode
       inventory
       category
+      comments {
+        comment
+      }
     }
   }
 `;

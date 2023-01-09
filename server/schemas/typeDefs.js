@@ -35,8 +35,8 @@ const typeDefs = gql`
  
   }
   type Mutation {
-    addComment(user: String!, comment: String!, itemcode: String!}): Reviews
-    addUser(email: String!, password:String!): User
+    addComment(users: String!, comment: String!, itemcode: String!): Reviews
+    addUser(email: String!, password:String!): Users
     updateItems(id:ID!, inventory:Int!, price:Float): Greene
   }
 `;

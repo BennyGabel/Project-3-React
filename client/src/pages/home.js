@@ -25,7 +25,7 @@ import { QUERY_ITEMS_ALL } from '../utils/queries';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_ITEMS_ALL);
-  const itemcode  = data?.itemcode  || [];
+  const greenes  = data?.greenes  || [];
   console.log(data);
   // const name      = data?.name      || [];
   // const brand     = data?.brand     || [];
@@ -45,7 +45,7 @@ const Home = () => {
         <div className="col-12 col-md-8 mb-3">
           {loading ? (<div>Loading...</div> ) : (
             <ItemList 
-              items={itemcode}
+              items={greenes}
               // name ={name}
               // brand={brand}
               // price={price}
