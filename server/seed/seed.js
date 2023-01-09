@@ -13,15 +13,23 @@ db.once('open', async () => {
   await Reviews.deleteMany({});
   // bulk create each model
 
-  //  await Greene.insertMany(inventory);
-  //  await Users.insertMany(userData);
-  //  await Reviews.insertMany(reviewsData);
 
   const greenes = await Greene.insertMany(inventory);
   const users  = await Users.insertMany(userData);
   const reviews = await Reviews.insertMany(reviewsData);
 
-  
+    console.log('all done!');
+    process.exit(0);
+ 
+});
+
+
+
+
+
+  //  await Greene.insertMany(inventory);
+  //  await Users.insertMany(userData);
+  //  await Reviews.insertMany(reviewsData);
 // const randGrn = Greene.findOne({});
 // const randUsr = Users.findOne({});
 
@@ -39,10 +47,3 @@ db.once('open', async () => {
 //     tempUsers.comment.push(rv._id);
 //     await tempUsers.save();
 //   }
-
-  
-    console.log('all done!');
-    process.exit(0);
- 
-});
-

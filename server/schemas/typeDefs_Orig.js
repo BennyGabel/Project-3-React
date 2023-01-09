@@ -34,10 +34,16 @@ const typeDefs = gql`
     comments: [Reviews]
  
   }
+
   type Mutation {
-    addComment(user: String!, comment: String!, itemcode: String!}): Reviews
-    addUser(email: String!, password:String!): User
-    updateItems(id:ID!, inventory:Int!, price:Float): Greene
+    addUser(--id: String!, userName: String!): model/schema name
+    addComment(--id: ID!, commentText: String!): model/schema name
+    addItem(--id: ID!, itemName: ID!): model/schema name
+
+    removeUser(userName: String!, thoughtAuthor: String!): model/schema name
+    removeItem(itemId: ID!, commentId: ID!): model/schema name
+    removeComment(commentID: ID!): model/schema name
+
   }
 `;
 

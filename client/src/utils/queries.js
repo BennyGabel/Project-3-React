@@ -1,27 +1,29 @@
 import { gql } from '@apollo/client';
 
-export const nameOfQuery = gql`
-  query schemaName($id: ID!) {
-    keyName1(id: $Id) {
-        _id
-        keyName1-key1
-        keyName1-key2
-    }
-  }
-`;
-
-export const nameOfQuery2 = gql`
-  query schemaName($id: ID!) {
-    keyName1(id: $Id) {
+export const QUERY_ITEMS_ALL = gql`
+  query allItems {
+    itemcode {
       _id
-      keyName1-key1
-      keyName1-key2
-      keyName1-key3 {
-        _id
-        keyName1-key3-key1
-        keyName1-key3-key2
-      }
+      itemcode
+      name
+      brand
+      price
+      inventory
+      category
     }
   }
 `;
 
+// export const QUERY_ITEMS_BRAND = gql`
+  // query getSingleThought($brand: brand!) {
+  //   thought(brand: $brand) {
+  //     _id
+  //     name
+  //     brand
+  //     price
+  //     inventory
+  //     category
+  //     }
+  //   }
+  // }
+// `;

@@ -14,8 +14,9 @@ const ReviewSchema = new Schema(
     // email:     { type: String},
     comment:   { type: String},
     createdAt: { type: Date, default: Date.now },
-    user:    [{type: Schema.Types.ObjectId, ref: 'Users'}],
-    itemcode: [{type: Schema.Types.ObjectId, ref: 'Greene'}]
+    // user:    [{type: Schema.Types.ObjectId, ref: 'Users'}],
+    user:    {type: Schema.Types.ObjectId, ref: 'Users'},
+    itemcode: {type: Schema.Types.ObjectId, ref: 'Greene'}
   }
 )
 
