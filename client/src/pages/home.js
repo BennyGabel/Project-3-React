@@ -16,10 +16,9 @@ import { useQuery } from '@apollo/client';
 // }
 
 // Export Function 
-import React from 'react';
-import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ItemList';
+
+import ItemList from '../components/ItemList';
 // import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_ITEMS_ALL } from '../utils/queries';
@@ -27,11 +26,12 @@ import { QUERY_ITEMS_ALL } from '../utils/queries';
 const Home = () => {
   const { loading, data } = useQuery(QUERY_ITEMS_ALL);
   const itemcode  = data?.itemcode  || [];
-  const name      = data?.name      || [];
-  const brand     = data?.brand     || [];
-  const price     = data?.price     || [];
-  const inventory = data?.inventory || [];
-  const category  = data?.category  || [];
+  console.log(data);
+  // const name      = data?.name      || [];
+  // const brand     = data?.brand     || [];
+  // const price     = data?.price     || [];
+  // const inventory = data?.inventory || [];
+  // const category  = data?.category  || [];
   
   return (
     <main>
@@ -43,16 +43,14 @@ const Home = () => {
           <ItemList />
         </div> */}
         <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ItemList
+          {loading ? (<div>Loading...</div> ) : (
+            <ItemList 
               items={itemcode}
-              name ={name}
-              brand={brand}
-              price={price}
-              inventory={inventory}
-              category={category}
+              // name ={name}
+              // brand={brand}
+              // price={price}
+              // inventory={inventory}
+              // category={category}
               title="Some Feed for item(s)..."
             />
           )}
@@ -60,6 +58,6 @@ const Home = () => {
       </div>
     </main>
   );
-};
+}
 
 export default Home
