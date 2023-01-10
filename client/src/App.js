@@ -21,7 +21,8 @@ function App() {
   // const {portfolio, setPortfolio} = useState('About')      // ES6
   const [pageSelect, setShop] = useState('Home')      // ES6
   
-  const Render = () => {      
+  // const Render = () => {      
+  const RenderP = () => {      
     switch (pageSelect) {
       case 'Home'   : return  <Route  path="/" element={<Home/>} />
       // case 'Shop'   : return  <Route  path='Greene/:id'  element={<Shop/>} />
@@ -38,7 +39,10 @@ function App() {
         <div className="App">
         <Navbar show_screen={pageSelect} set_screen={setShop}/>  
                <Routes>
-                 {<Render/>}
+                  <Route  exact path='/' element={<Home/>} />           {/*   exact means the URL has to be exact /     */}    
+                  {/* <Route  path='/greene'  element={<Shop/>} />         */}
+                  {/*   <Route  path='/reviews'  element={<Reviews/>}/>       Will call the review page, not a reviw id */}
+                  {/*   <Route  path='/login' element={<Login/>}/> */}
                 </Routes>
               <Footer/>
         </div>
