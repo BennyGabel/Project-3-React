@@ -6,7 +6,7 @@ const { Schema, model } = require('mongoose');
       brand: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
       price: {type: Number, required: true },
       itemcode: String,
-      image: String,  // capsules/liquid.. 
+      image: String,  
       inventory: Number,
       category: String,
       comments: [{ type: Schema.Types.ObjectId, ref: 'Reviews' }],
