@@ -39,11 +39,10 @@ function App() {
         <div className="App">
         <Navbar show_screen={pageSelect} set_screen={setShop}/>  
                <Routes>
-                  <Route  path='/login' element={<Login/>}/> 
-                  <Route  exact path='/' element={<Home/>} />     
-                  <Route  path='/greene'  element={<Shop/>} />         
-                  <Route  path='/reviews'  element={<Reviews/>} /> 
-                  
+                  <Route  exact path='/login'   element={<Login/>}/> 
+                  <Route  exact path='/greene'  element={<Shop/>} />         
+                  <Route  exact path='/reviews' element={<Reviews/>} /> 
+                  <Route  exact path='/'        element={<Home/>} />                       
                 </Routes>
 
               <Footer/>
