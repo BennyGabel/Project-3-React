@@ -19,8 +19,9 @@ const client = new ApolloClient({
 
 function App() {
   // const {portfolio, setPortfolio} = useState('About')      // ES6
-  const [pageSelect, setShop] = useState('Home')      // ES6
-  
+//   const [pageSelect, setShop] = useState('Home')      // ES6
+const [pageSelect, setShop] = useState('Reviews')      // ES6
+
   // const Render = () => {      
   // const RenderP = () => {      
     // switch (pageSelect) {

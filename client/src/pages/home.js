@@ -50,6 +50,7 @@ const Home = () => {
                   <div className='greene-box'>
                     <div>
                       <div className='greene-labels'> {item.name} </div>
+                      {item.itemcode} <br />
                       {item.category} <br />
                       {item.brand}    <br />
                       {item.price}    <br />

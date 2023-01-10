@@ -11,6 +11,7 @@ const typeDefs = gql`
     itemcode: String
     inventory: Int
     category: String
+    image: String
     comments: [Reviews]
   }
 
@@ -34,16 +35,10 @@ const typeDefs = gql`
     comments: [Reviews]
  
   }
-
   type Mutation {
-    addUser(--id: String!, userName: String!): model/schema name
-    addComment(--id: ID!, commentText: String!): model/schema name
-    addItem(--id: ID!, itemName: ID!): model/schema name
-
-    removeUser(userName: String!, thoughtAuthor: String!): model/schema name
-    removeItem(itemId: ID!, commentId: ID!): model/schema name
-    removeComment(commentID: ID!): model/schema name
-
+    addComment(users: String!, comment: String!, itemcode: String!): Reviews
+    addUser(email: String!, password:String!): Users
+    updateItems(id:ID!, inventory:Int!, price:Float): Greene
   }
 `;
 
