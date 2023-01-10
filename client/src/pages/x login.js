@@ -164,8 +164,8 @@ const Login = () => {
                   {/* 1) <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
                   <input className='form-input' inputTest = 'reset' type='text' id='userEmail' placeholder='Enter Email' onBlur={(e) => validateEmail(e)} />
               </div>
-              <span id='emailMessage' style={{fontWeight: 'bold', color: 'red'}}></span>    {/*  , float:left */}
-                             
+              <span id='emailMessage' style={{fontWeight: 'bold', color: 'red', float:left  }}></span>
+
               <div className='main-form'>
                   <label htmlFor='password-login'>Password:</label>
                   <input className='form-input' inputTest = 'reset' type='password' id='password-login' placeholder='Enter Password' onBlur={handleChange} />
