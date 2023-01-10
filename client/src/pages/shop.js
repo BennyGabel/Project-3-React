@@ -1,25 +1,16 @@
 import React, { Component }  from 'react';
-import ITEMS from './../components/data/items.json';
+// import ITEMS from './../components/data/items.json';
+import { useQuery } from '@apollo/client';
 
-// Create function
-function shopDropSelector(){
-  const shopCateg = ['xxxxx','yyyyy','zzzzzz'];
-  var categDropMenuElem = document.getElementById('category-drop-menu');
-  var dropDown = document.createElement('div'); dropDown.setAttribute('id','dropDownMenu-container')
-  categDropMenuElem.appendChild(dropDown);
-  var dropNameSelect = document.createElement('div'); dropNameSelect.setAttribute('id','dropCategSelect');
-  var dropUl = document.createElement('ul'); dropUl.setAttribute('id','dropMenuUL');
-  dropDown.appendChild(dropNameSelect);
-  dropDown.appendChild(dropUl);
-  for(var shpCat of shopCateg){
-      var dropElemLi = document.createElement('li');
-      dropElemLi.textContent = shpCat; dropElemLi.setAttribute('a','#');
-      dropUl.appendChild(dropElemLi);
-  }
-return categDropMenuElem;
-}
+// import ItemList from '../components/ItemList';
+
+
+import { QUERY_ITEMS_ALL } from '../utils/queries';
 
 const Shop = () => {
+
+  const { loading, data } = useQuery(QUERY_ITEMS_ALL);
+  const greenes = data?.greenes || [];
   // const categorySelect = () => {
   //   console.log(1)
   //   var showCategoryEl = document.getElementById("category")
@@ -27,44 +18,45 @@ const Shop = () => {
   //   alert(cShowCategory)
   // }
 
-
-  const shopItems = shopDropSelector;
-
   return (
 <div className='react-container'>
     <div id='dropMenu-container'>
-      <div className= 'dropMenu-size'>
-        <input id='search-items'></input>
-        <div id='dropMenuSelect'>
+      
+      {/* <div className= 'dropMenu-size'> */}
+      
+        {/* <div id='dropMenuSelect'> */}
           <ul id='dropMenuUL'> 
-              <li className='li-items' a='#' >AA</li>
-              <li className='li-items' a='#' >BB</li>
-              <li className='li-items' a='#' >CC</li>
-              <li className='li-items' a='#' >DD</li>
-              <li className='li-items' a='#' >EE</li>
+              <li className='li-items'  >Brain & Memory</li>
+              <li className='li-items'  >Energy and Stress</li>
+              <li className='li-items'  >Immune Support</li>
+              <li className='li-items'  >Sleep and Mood</li>
           </ul>
-        </div>
-      </div>
+          <input id='search-items'></input>
+      {/* </div> */}
     </div>
 
-      <div className="flex-row">
-        {/* repos && repos.map((item) =>  */}
-        {ITEMS && ITEMS.map((item) =>
+  
+    <div className='greene-container'>
+
+     {greenes.map((item) => (
+        <div className='greene-item-container'>
           <div key={item.id}>
-            <div className='card'>
-              <div>
-                <div className='bold'> {item.name} </div>   
-                  {item.category} 
-                  <br/>
-                  {item.brand}
-              </div>
-              <div key={item.id}>
-                <img style={{ width: 250, height:250 }} src={item.image} className="logo" alt=""/>
-              </div>
-            </div>
-          </div>
-          )}
-       </div>
+            <div className='greene-box'>
+                    <div>
+                      <div className='greene-labels'> {item.name} </div>
+                      {item.category} <br />
+                      {item.brand}    <br />
+                      {item.price}    <br />
+                    </div>
+                    <div key={item.id}>
+                      <img style={{ width: 250, height: 250 }} src={item.image} alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            ))
+          }
+        </div> 
     </div>
     )
 }
