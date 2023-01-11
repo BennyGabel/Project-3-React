@@ -30,30 +30,39 @@ const Login = () => {
     var userEmailEl = document.getElementById('userEmail').value
     var passwordEl  = document.getElementById('password-login').value
 
-console.log('LOGIN SUBMIT PRESSED!!')
 
 
-    // const { loading,data } = useQuery(QUERY_USERS_ALL)
-    console.log('data #2', data)
+    // console.log('LOGIN SUBMIT PRESSED!!')
+
+
+    // // const { loading,data } = useQuery(QUERY_USERS_ALL)
+    // console.log('data #2', data)
+    // // const allusers = data?.allusers || [];
+    
+    // console.log('allusers #2', allusers)
+
+    // console.log("*-*-*-*-*-*-*-*")
+
+    // console.log("User's info:"  )
+    // console.log('Email',  userEmailEl)
+    // console.log('Password', passwordEl)
+
+
+
     // const allusers = data?.allusers || [];
     
-    console.log('allusers #2', allusers)
+//     console.log('allusers #2', allusers)
 
-    console.log("*-*-*-*-*-*-*-*")
+// console.log("user")
 
-    console.log("User's info:"  )
-    console.log('Email',  userEmailEl)
-    console.log('Password', passwordEl)
-
-
-
-    // const allusers = data?.allusers || [];
+// console.log("Type of userEmailEl:", typeof(userEmailEl))
     
-    console.log('allusers #2', allusers)
-
-    // let objUser = allusers.find(chk => chk.email === {userEmailEl});
-    let objUser = allusers.find(chk => chk.email === 'pho@gmail.com');
-    console.log(objUser)
+    // let objUser1 = allusers.find(chk => chk.email === 'pho@gmail.com');   // PASSED
+    let objUser  = allusers.find(chk => chk.email == userEmailEl);        // PASSED
+    // console.log(typeof(objUser.email))
+    // console.log(objUser1)
+    // console.log(objUser)
+    // console.log("Type of objUser/email:", typeof(objUser.email))
 
 
     if (typeof(objUser) === 'object') {
