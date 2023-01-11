@@ -1,11 +1,21 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import validator from 'validator'
+import { useQuery } from '@apollo/client';
 // import 
+import { QUERY_USERS_ALL } from '../utils/queries';
+
+
+
 
 // Create function
 const Login = () => {
-  const handleSubmit = (e) =>{
+
+
+
+
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     // check if empty then return null
     // if both are populated 
@@ -15,53 +25,53 @@ const Login = () => {
   }
   const handleChange = (e) => {
     e.preventDefault();
-    
+
     const cFrom = e.target.id
     switch (cFrom) {
-      case 'id-login'       :  
-      if (e.target.value.length > 0) {
-        alert ('filled');
-        break
-       } else { 
-        alert('empty')
-        break
-      }
-      
-      alert ('left login')
-      var logId = document.getElementById(cFrom);
+      case 'id-login':
+        if (e.target.value.length > 0) {
+          alert('filled');
+          break
+        } else {
+          alert('empty')
+          break
+        }
 
-       alert(  logId.value);
+        alert('left login')
+        var logId = document.getElementById(cFrom);
 
-       break;
-
-      case 'password-login' :  alert ('left password') 
+        alert(logId.value);
 
         break;
-       }
-  
-  }
 
-  
- const switchform =(e)=> { 
+      case 'password-login': alert('left password')
 
-  const displayElem = e.target.id;
-  console.log(displayElem);
-  var logElem = document.getElementById('input-forms-login');
-  var signElem= document.getElementById('input-forms-signup');
+        break;
+    }
 
-
-  if (displayElem === 'login-title'){
-    
-    logElem.style.display = "block";
-    signElem.style.display = "none"
-  } else {
-    logElem.style.display = "none";
-    signElem.style.display = "block";
   }
 
 
+  const switchform = (e) => {
 
-}
+    const displayElem = e.target.id;
+    console.log(displayElem);
+    var logElem = document.getElementById('input-forms-login');
+    var signElem = document.getElementById('input-forms-signup');
+
+
+    if (displayElem === 'login-title') {
+
+      logElem.style.display = "block";
+      signElem.style.display = "none"
+    } else {
+      logElem.style.display = "none";
+      signElem.style.display = "block";
+    }
+
+
+
+  }
   //   var placeHldrEmail = userEmail.getAttribute('placeholder');
   //   var userLbl = document.getElementById('userLabel');
 
@@ -74,12 +84,12 @@ const Login = () => {
   //   var placeHldrConf = passConfirm.getAttribute('placeholder'); 
 
   //   var submitBtn = document.getElementById('submit-button');
- 
 
- 
+
+
   //   switch (e) {
   //     case 'login' :  
-        
+
   //       placeHldrEmail.setAttribute('Enter Email ID : ');
   //       userLbl.textContent = 'User ID :';
   //       placeHldrPass.setAttribute('Enter Password');
@@ -99,7 +109,7 @@ const Login = () => {
 
 
   //       submitBtn.textContent = 'Sign Up';
-      
+
   //     }
 
   //   }
@@ -149,54 +159,85 @@ const Login = () => {
   //     $('.notification').removeClass('show');
   //   }, 5000);
   // });
+  const { loading,data } = useQuery(QUERY_USERS_ALL);
+
+  const allusers = data?.allusers || [];
+
+
+  
 
   return (
     <div className='react-container'>
-         <div id='form-switch'>
-              <h2 id='login-title'  onclick={(strID) =>switchform(strID)}>Login</h2>
-              <h2 id='signup-title' onclick={(strID) =>switchform(strID)}>Signup</h2>
-            </div>
-        <div id='input-forms-login'>
+      <div id='form-switch'>
+        <h2 id='login-title' onclick={(strID) => switchform(strID)}>Login</h2>
+        <h2 id='signup-title' onclick={(strID) => switchform(strID)}>Signup</h2>
+      </div>
+      <div id='input-forms-login'>
         <h2 className='page-title'>Login</h2>
-            <form className='whole-form' onSubmit={handleSubmit}>
-              <div className='main-form'>
-                  <label htmlFor='id-login'>Email:</label>
-                  {/* 1) <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
-                  <input className='form-input' inputTest = 'reset' type='text' id='userEmail' placeholder='Enter Email' onBlur={(e) => validateEmail(e)} />
-              </div>
-              <span id='emailMessage' style={{fontWeight: 'bold', color: 'red'}}></span>    {/*  , float:left */}
-                             
-              <div className='main-form'>
-                  <label htmlFor='password-login'>Password:</label>
-                  <input className='form-input' inputTest = 'reset' type='password' id='password-login' placeholder='Enter Password' onBlur={handleChange} />
-              </div>
-              <div className='sign-log-button'>
-                  <button className='form-button' id='signin-button' type='submit' >login</button>
-              </div>
-          </form>  
-        </div>
+        <form className='whole-form' onSubmit={handleSubmit}>
+          <div className='main-form'>
+            <label htmlFor='id-login'>Email:</label>
+             {/* <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
+            <input className='form-input' inputTest = 'reset' type='text' id='userEmail' placeholder='Enter Email' onBlur={(e) => validateEmail(e)} />
+          </div>
+          <span id='emailMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>    {/*  , float:left */}
 
-        <div id='input-forms-signup'>
-          <h2 className='page-title'>Signup</h2>
-          <form className='whole-form'>
-              <div className='main-form'>
-                  <label htmlFor='email-signup'>Create New ID:</label>
-                  <input className='form-input' inputTest = 'reset' type='text' id='email-signup' placeholder='New Email'/>
+          <div className='main-form'>
+            <label htmlFor='password-login'>Password:</label>
+            <input className='form-input' inputTest='reset' type='password' id='password-login' placeholder='Enter Password' onBlur={handleChange} />
+          </div>
+          <div className='sign-log-button'>
+            <button className='form-button' id='signin-button' type='submit' >login</button>
+          </div>
+        </form>
+      </div>
+
+      <div id='input-forms-signup'>
+        <h2 className='page-title'>Signup</h2>
+        <form className='whole-form'>
+          <div className='main-form'>
+            <label htmlFor='email-signup'>Create New ID:</label>
+            <input className='form-input' inputTest='reset' type='text' id='email-signup' placeholder='New Email' />
+          </div>
+          <div className='main-form'>
+            <label htmlFor='password-signup'>Password:</label>
+            <input className='form-input' inputTest='reset' type='password' id='password-signup' placeholder='Create Password' />
+          </div>
+          <div className='main-form pass-confirm'>
+            <label htmlFor='password-signup'>Password:</label>
+            <input className='form-input' inputTest='reset' type='password' id='password-confirm' placeholder='Confirm Password' />
+          </div>
+          {/* <br></br> */}
+          <div className='sign-log-button'>
+            <button className='form-button' id='signup-button' type='submit'>signup</button>
+          </div>
+        </form>
+      </div>
+
+
+      {loading ? (<div>Loading...</div>) : (
+        <div>
+
+         {console.log('where else: ',allusers)} 
+
+         {/* allusers can only exist inside the "div element" of the loading ternorary */}
+         {allusers.map((user) => (
+            <div>
+              <div key={user.id}>
+                {user.email}    <br />
+                {user.password} <br />
               </div>
-              <div className='main-form'>
-                  <label htmlFor='password-signup'>Password:</label>
-                  <input className='form-input' inputTest = 'reset' type='password' id='password-signup' placeholder='Create Password'/>
-              </div>
-              <div className='main-form pass-confirm'>
-                  <label htmlFor='password-signup'>Password:</label>
-                  <input className='form-input' inputTest = 'reset' type='password' id='password-confirm' placeholder='Confirm Password' />
-              </div>
-              {/* <br></br> */}
-              <div className='sign-log-button'>
-                  <button className='form-button' id='signup-button' type='submit'>signup</button>
-              </div>
-          </form>
-        </div>
+            </div>
+          ))
+        }
+
+     </div>
+    
+      )}
+
+
+
+
     </div>
   )
 }

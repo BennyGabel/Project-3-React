@@ -34,7 +34,8 @@ const typeDefs = gql`
     greene(id:ID!): Greene
     categories(category:String!):Greene
     comments: [Reviews]
- 
+    allusers:[Users]
+    
   }
   type Mutation {
     addComment(users: String!, comment: String!, itemcode: String!): Reviews

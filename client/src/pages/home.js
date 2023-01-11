@@ -56,7 +56,7 @@ const Home = () => {
                       {item.price}    <br />
                     </div>
                     <div key={item.id}>
-                      <img style={{ width: 250, height: 250 }} src={item.image} alt="" />
+                      <img style={{ height: 250 }} src={item.image} alt="" />
                     </div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const Home = () => {
 
         </div> 
         )
-      }
+          }
       </div >
     {/* </main > */}
     </div>

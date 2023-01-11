@@ -13,8 +13,10 @@ const resolvers = {
       },
     comments: async() => {
       return await Reviews.find({}).populate('itemcode');
-    }
-   
+    },
+    allusers: async () => {
+      return await Users.find({});
+    },
   },
   
   Mutation: {
