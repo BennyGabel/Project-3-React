@@ -42,7 +42,7 @@ const Login = () => {
   }
 
   
- function switchform (e) { 
+ const switchform =(e)=> { 
 
   const displayElem = e.target.id;
   console.log(displayElem);
