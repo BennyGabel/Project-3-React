@@ -1,6 +1,63 @@
+*{
+  background-color: rgb(22, 71, 18);
+  box-sizing: border-box;
+}
+
+
+
+/* .flex-row {
+    display: flex; 
+    /* display: inline-flex; */
+    /* flex-wrap: wrap; */
+  
+.menuoptions, li {
+    background-color: rgb(64, 138, 62);
+}
+
+.quadrant {
+  background-color: rgb(96, 215, 100);
+  display: flex;
+  flex-direction: row;
+  margin:20px auto 20px auto;
+  width: 80%;
+  height: 400px;
+  border: 1px solid rgb(255,0,0);
+}
+
+.shopCat1, .shopCat2, .shopCat3, .shopCat4 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin:10px auto 10px auto;
+  width: 45%;
+  height: 80%;
+  border: 1px solid rgb(55, 0, 255);
+}
+
+.shopCat1 {
+  background-image: url("../pages/Brain.jpg");
+  background-size: cover;
+}
+
+.shopCat2 {
+  background-image: url("../pages/Energy.jpg");
+  background-size: cover;
+}
+
+.shopCat3 {
+  background-image: url("../pages/Sleep.jpg");
+  background-size: cover;
+}
+
+.shopCat4 {
+  background-image: url("../pages/Immunity.jpg");
+  background-size: cover;
+}
+
+/*   
 * {
   /* background-color: rgb(126, 177, 121); */
-}
+
 
 .flex-row {
     display: flex; 

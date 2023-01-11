@@ -1,78 +1,48 @@
 import './home.css';
-import React, { Component } from 'react';
-import { useQuery } from '@apollo/client';
+// import React, { Component } from 'react';             [AW]
+// import ITEMS from './../components/data/items.json';     [OLD]
 
-// import ItemList from '../components/ItemList';
+// import { useQuery } from '@apollo/client';            [AW]
 
+// [OLD]
+// const Home = () => {
+//   return (
+//   <div className='react-container'>
+//       Home Landing Page
+//   </div>
+//   );
+// }
+// Export Function
+import ItemList from '../components/ItemList';
+// import ThoughtForm from '../components/ThoughtForm';
 
-import { QUERY_ITEMS_ALL } from '../utils/queries';
-// import { QUERY_CATEGORIES } from '../utils/queries';
-
+// import { QUERY_ITEMS_ALL } from '../utils/queries';     [AW]
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_ITEMS_ALL);
-
-  const greenes = data?.greenes || [];
-
+  // const { loading, data } = useQuery(QUERY_ITEMS_ALL); [AW]
+  // const greenes = data?.greenes || [];                 [AW]
+  // console.log(data);                                   [AW]
   // const name      = data?.name      || [];
   // const brand     = data?.brand     || [];
   // const price     = data?.price     || [];
   // const inventory = data?.inventory || [];
   // const category  = data?.category  || [];
-  // const categ1 = document.createElement('section'); categ1.setAttribute('class','greene-categ');
-  // const categ2 = document.createElement('section'); categ1.setAttribute('class','greene-categ');
-  // var ctgCnt = 1;
-  // for( let ctgry of category){
-  //   var newCateg = document.createElement('div'); 
-  //   newCateg.setAttribute('class','greene-categ-item');
-  //   newCateg.textContent = ctgry;
-  //   if(ctgCnt<3){
-  //     categ1.appendChild(newCateg);
-  //   }else{
-  //     categ2.appendChild(newCateg);
-  //   }
-  //   ctgCnt +=1;
-  // }
-
   return (
-    <div className='react-container'>
-  {/* //  <main> */}
-  
-      <div className='greene-container'>
-
-      {loading ? (<div>Loading...</div>) : (
-        
-        <div>
-
-          {/*    let's set up home page to be quadrant of categories */}
-          {greenes.map((item) => (
-              <div className='greene-item-container'>
-                <div key={item.id}>
-                  <div className='greene-box'>
-                    <div>
-                      <div className='greene-labels'> {item.name} </div>
-                      {item.itemcode} <br />
-                      {item.category} <br />
-                      {item.brand}    <br />
-                      {item.price}    <br />
-                    </div>
-                    <div key={item.id}>
-                      <img style={{ width: 250, height: 250 }} src={item.image} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>  
-            ))
-          }
-
-
-
-        </div> 
-        )
-      }
+    <main>
+      <div className="flex-row justify-center">
+        {/* {loading ? (<div>Loading...</div>) : ( */}
+          
+          <div className='quadrant'>
+            <div className='shopCat1'></div>
+            <div className='shopCat2'></div>
+          </div>
+          
+          <div className='quadrant'>
+            <div className='shopCat3'></div>
+            <div className='shopCat4'></div>
+          </div>
+      
       </div >
-    {/* </main > */}
-    </div>
-  );
-}
-
+    </main >
+          )
+  }
 export default Home
