@@ -7,7 +7,7 @@ import { QUERY_USERS_ALL } from '../utils/queries';
 
 
 
-// var aryAllUsers = []
+var aryAllUsers = []
 
 
 // Create function
@@ -17,66 +17,14 @@ const Login = () => {
 
 
 
-  // const handleSubmit = (e) => {      // Function Renamed
-  const handleLoginSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
     // check if empty then return null
     // if both are populated 
     // 
     // 
 
-    // [bg]  2023.01.11
-    var userEmailEl = document.getElementById('userEmail').value
-    var passwordEl  = document.getElementById('password-login').value
-
-console.log('LOGIN SUBMIT PRESSED!!')
-
-
-    // const { loading,data } = useQuery(QUERY_USERS_ALL)
-    console.log('data #2', data)
-    // const allusers = data?.allusers || [];
-    
-    console.log('allusers #2', allusers)
-
-    console.log("*-*-*-*-*-*-*-*")
-
-    console.log("User's info:"  )
-    console.log('Email',  userEmailEl)
-    console.log('Password', passwordEl)
-
-
-
-    // const allusers = data?.allusers || [];
-    
-    console.log('allusers #2', allusers)
-
-    // let objUser = allusers.find(chk => chk.email === {userEmailEl});
-    let objUser = allusers.find(chk => chk.email === 'pho@gmail.com');
-    console.log(objUser)
-
-
-    if (typeof(objUser) === 'object') {
-      if (objUser.length === 0) {
-        console.log("Email " + userEmailEl + " is not register as a user")
-        } else {
-          if (passwordEl === objUser.password) {
-            console.log("Correct Password, please processd")
-        } else {
-          console.log("CorrectPassword associated to " + userEmailEl + " is " + objUser.password)
-        }
-      }
-    } else {
-        console.log("Password associated to " + userEmailEl + " is " + objUser.password)
-    }
-
-
-
-
-
   }
-
-  // [BG]
   const handleChange = (e) => {
     e.preventDefault();
 
@@ -213,43 +161,14 @@ console.log('LOGIN SUBMIT PRESSED!!')
   //     $('.notification').removeClass('show');
   //   }, 5000);
   // });
+  const { loading,data } = useQuery(QUERY_USERS_ALL);
 
-
-
-
-
-
-  // [bg] BEG -  ORIGINAL      MOVE THE CODE BELOW 
-  
-  const { loading,data } = useQuery(QUERY_USERS_ALL)
-  console.log(data)
   const allusers = data?.allusers || [];
   
-  // aryAllUsers = allusers
-    // [bg] END -  ORIGINAL
+  aryAllUsers = allusers
 
+  console.log(aryAllUsers)
 
-
-  /* [bg] BEG - TEST CODE
-   const QUERY_ONE_USER = gql`
-  query Users {
-    allusers {
-      _id
-      email
-      password
-    }
-  }
-`;
-
-  const { loading,data } = useQuery(QUERY_USERS_ALL, {
-    variables: {breed},
-  });
-  [bg] END - TEST CODE */
-
-
-  // console.log(aryAllUsers)
-  // console.log(aryAllUsers['email'].includes('pho@gmail.com'))
-  // console.log(aryAllUsers.type)
 
 
   
@@ -257,12 +176,12 @@ console.log('LOGIN SUBMIT PRESSED!!')
   return (
     <div className='react-container'>
       <div id='form-switch'>
-        <h2 id='login-title' onClick={(strID) => switchform(strID)}>Login</h2>
-        <h2 id='signup-title' onClick={(strID) => switchform(strID)}>Signup</h2>
+        <h2 id='login-title' onclick={(strID) => switchform(strID)}>Login</h2>
+        <h2 id='signup-title' onclick={(strID) => switchform(strID)}>Signup</h2>
       </div>
       <div id='input-forms-login'>
         <h2 className='page-title'>Login</h2>
-        <form className='whole-form' onSubmit={handleLoginSubmit}>
+        <form className='whole-form' onSubmit={handleSubmit}>
           <div className='main-form'>
             <label htmlFor='id-login'>Email:</label>
              {/* <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
@@ -272,11 +191,7 @@ console.log('LOGIN SUBMIT PRESSED!!')
 
           <div className='main-form'>
             <label htmlFor='password-login'>Password:</label>
-            {/* 
-               <input className='form-input' inputTest='reset' type='password' id='password-login' placeholder='Enter Password' onBlur={handleChange} /> 
-               REMOVE/DO NOT CALL   handleChange
-            */}
-            <input className='form-input' inputTest='reset' type='password' id='password-login' placeholder='Enter Password' />
+            <input className='form-input' inputTest='reset' type='password' id='password-login' placeholder='Enter Password' onBlur={handleChange} />
           </div>
           <div className='sign-log-button'>
             <button className='form-button' id='signin-button' type='submit' >login</button>
@@ -306,7 +221,27 @@ console.log('LOGIN SUBMIT PRESSED!!')
         </form>
       </div>
 
+ {/* [BG]  LOOOK HERE */}
 
+      {loading ? (<div>Loading...</div>) : (
+        <div>
+
+         {console.log('where else: ',allusers)} 
+
+         {/* allusers can only exist inside the "div element" of the loading ternorary */}
+         {allusers.map((user) => (
+            <div>
+              <div key={user.id}>
+                {user.email}    <br />
+                {user.password} <br />
+              </div>
+            </div>
+          ))
+        }
+
+     </div>
+    
+      )}
 
 
 
