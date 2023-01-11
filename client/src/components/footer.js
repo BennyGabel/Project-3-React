@@ -4,7 +4,7 @@ import React, { Component }  from 'react';
 const Footer = () => {
     return (
         <div className="footer">
-            footer 
+            <h1>Made with power of the the lean, green, mean, machine!</h1>
         </div>
     )
 }
