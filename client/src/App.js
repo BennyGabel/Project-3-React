@@ -41,7 +41,11 @@ const [pageSelect, setShop] = useState('Reviews')      // ES6
         <Navbar show_screen={pageSelect} set_screen={setShop}/>  
                <Routes>
                   <Route  exact path='/login'   element={<Login/>}/> 
-                  <Route  exact path='/greene'  element={<Shop/>} />         
+                  <Route  exact path='/greene'  element={<Shop/>} />
+                  <Route  exact path='/greene/brainmemory'  element={<Shop/>} />
+                  <Route  exact path='/greene/energystress'  element={<Shop/>} />
+                  <Route  exact path='/greene/immunesupport'  element={<Shop/>} />
+                  <Route  exact path='/greene/sleepmood'  element={<Shop/>} />
                   <Route  exact path='/reviews' element={<Reviews/>} /> 
                   <Route  exact path='/'        element={<Home/>} />                       
                 </Routes>

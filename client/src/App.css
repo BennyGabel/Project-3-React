@@ -1,5 +1,7 @@
+
 *{
   box-sizing: border-box;
+  background-color: rgba(0, 102, 0, 0.813);
   /* border: solid 1px rgb(250, 172, 172); */
 }
 body{
@@ -201,13 +203,23 @@ label{
   transition: .20s ease-in-out;
 } */
 
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: orange;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
 #dropMenuUL{
   display:inline-block;
-  height:30px;
-  width: 10px;
-  background-color: rgba(145,22,38,.65);
+  height:35px;
+  width: 35px;
+  background-color: #3f3023;
   color:rgba(0, 234, 255, 0.75);
   list-style: none;
+  
 }
 
 /* #dropMenuSelect {
@@ -223,29 +235,36 @@ label{
 /* #dropMenuSelect:hover #dropMenuUL li{
   display: block;
 } */
+
+.dropMenuUL-btn{
+  display: block;
+  margin: 5px auto 35px auto;
+}
+
 #li-selected{
   float:left;
   height:30px;
   width: 100%;
-  background-color: transparent;
+  background-color: #3f3023;
 
 }
 .li-items{
   display:none;
   position: relative;
-  height:30px;
+  height: 30px;
   width: 150px;
-  background-color: rgba(145,22,38,.65);
+  background-color: #3f3023;
   color:rgba(0, 234, 255, 0.75);
   list-style: none;
   cursor: pointer;
+  text-decoration: none;
 }
 /* #dropMenuSelect:hover .li-items{
   display:block;
 
 } */
 #dropMenuUL:hover .li-items{
-  display:block;
+  display: block;
 
 }
 
@@ -254,6 +273,10 @@ label{
   color: #003488;
   border: 1px solid rgb(18, 72, 98);
   transition: .20s ease-in-out;
+}
+
+.searchItems-btn{
+  display: block;
 }
 
 
@@ -270,14 +293,24 @@ label{
 }
 
 .greene-item-container{
-  display:block;
+  display: flex;
+  flex-wrap: wrap;
  
 }
 .greene-container{
-  display:block;
-  width: 33%;
+  display: flexbox;
+  flex-direction: row;
+  width: 90%;
   margin: 0px auto 0px auto;
 }
+.greene-box{
+  display: inline-grid
+}
+.greene-labels{
+  display: inline-grid;
+}
+
+
 
 .review-forms{
   display:block;

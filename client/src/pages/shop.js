@@ -25,13 +25,22 @@ const Shop = () => {
       {/* <div className= 'dropMenu-size'> */}
       
         {/* <div id='dropMenuSelect'> */}
+        <div id='dropMenuUL-btn'>
+        <div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
           <ul id='dropMenuUL'> 
-              <li className='li-items'  >Brain & Memory</li>
-              <li className='li-items'  >Energy and Stress</li>
-              <li className='li-items'  >Immune Support</li>
-              <li className='li-items'  >Sleep and Mood</li>
+              <li className='li-items'  ><a className='li-items' href='/shop/brainmemory'>Brain & Memory</a></li>
+              <li className='li-items'  ><a className='li-items' href='/shop/energystress'>Energy and Stress</a></li>
+              <li className='li-items'  ><a className='li-items' href='/shop/immunesupport'>Immune Support</a></li>
+              <li className='li-items'  ><a className='li-items' href='/shop/sleepmood'>Sleep and Mood</a></li>
           </ul>
+        </div>
+        <div id='searchItems-btn'>
           <input id='search-items'></input>
+        </div> 
       {/* </div> */}
     </div>
 
