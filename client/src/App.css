@@ -219,7 +219,9 @@ label{
   background-color: #3f3023;
   color:rgba(0, 234, 255, 0.75);
   list-style: none;
-  
+  position: absolute;
+  margin: 5px auto 5px auto;
+  padding: 5px;
 }
 
 /* #dropMenuSelect {
@@ -238,7 +240,7 @@ label{
 
 .dropMenuUL-btn{
   display: block;
-  margin: 5px auto 35px auto;
+  position: absolute;
 }
 
 #li-selected{
@@ -276,7 +278,9 @@ label{
 }
 
 .searchItems-btn{
-  display: block;
+  position: absolute;
+  margin: 5px auto 5px auto;
+  padding: 5px 5px 5px 5px;
 }
 
 
