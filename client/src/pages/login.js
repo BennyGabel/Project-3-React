@@ -72,22 +72,7 @@ const Login = () => {
 const handleSignUpSubmit = (e) => {
   e.preventDefault();
 
-
-/*
-
-            <input className='form-input' inputTest='reset' type='text' id='email-signup' placeholder='New Email' onBlur={(e) => validateEmail(e, "Signup")} />
-
-          <span id='emailSignUpMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>    
-
-            <input className='form-input' inputTest='reset' type='password' id='password-signup' placeholder='Create Password' />
-            <input className='form-input' inputTest='reset' type='password' id='password-confirm' placeholder='Confirm Password' />
-
-*/
-
-
-
-  
-     
+    
      var emailsignupEl     = document.getElementById('email-signup').value
      var passwordsignupEl  = document.getElementById('password-signup').value
      var passwordconfirmEl = document.getElementById('password-confirm').value
@@ -203,12 +188,8 @@ const handleSignUpSubmit = (e) => {
         var valemailEl = document.getElementById('emailMessage')
     
         if (validator.isEmail(email)) {
-          // setEmailError('Valid Email :)')
-          // alert('Valid Email :)')
           valemailEl.innerHTML = ''
         } else {
-          // setEmailError('Enter valid Email!')
-          // alert('Please enter valid Email!')
           valemailEl.innerHTML = 'Invalid Email!'
     
         }
@@ -221,12 +202,8 @@ const handleSignUpSubmit = (e) => {
           var valemailEl = document.getElementById('emailSignUpMessage')
       
           if (validator.isEmail(email)) {
-            // setEmailError('Valid Email :)')
-            // alert('Valid Email :)')
             valemailEl.innerHTML = ''
           } else {
-            // setEmailError('Enter valid Email!')
-            // alert('Please enter valid Email!')
             valemailEl.innerHTML = 'Invalid Email!'
       
           }

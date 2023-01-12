@@ -4,7 +4,8 @@ import React, { Component }  from 'react';
 const Footer = () => {
     return (
         <div className="footer">
-            <h1>Made with the power of the lean, mean, Greene machine!</h1>
+            {/* <h1>Made with the power of the lean, mean, Greene machine!</h1> */}
+            <h2>Made with the power of the lean, mean, Greene machine!</h2>
         </div>
     )
 }

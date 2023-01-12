@@ -18,7 +18,7 @@ const resolvers = {
       return await Users.find({});
     },
     getCategory: async (parent, args) => {
-      return await Greene.find(args.id);
+      return await Greene.find(args.category);
     },
   },
   

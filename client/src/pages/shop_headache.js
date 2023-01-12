@@ -15,20 +15,27 @@ const Shop = () => {
   
   // const greenes = data?.greenes || [];
   const greenes = data?.greenes    || [];
-  // console.log("greenes", greenes)
+  console.log("greenes", greenes)
 
-  const greeneFilter = greenes;
+  greeneFilter = greenes
 
   // const greeneFilter = greenes.filter(greeneFilter => greeneFilter.category === 'Energy and Stress')   WORK
   // const greeneFilter = greenes.filter(greeneFilter => greeneFilter.category === 'Sleep and Mood')    WORKS
   // console.log(greeneFilter)   WORKS
 
-// console.log( "Parameter" + cCategory )
+console.log( "Parameter" + cCategory )
 //   category
 // : 
 // "Brain and Memory"
 
+  // console.log("abc", abc)
 
+
+
+//   abc = greenes
+// console.log(abc)
+  // greenes = greenes.fil
+  // "category":"Energy and Stress"
   return (
 <div className='react-container'>
     <div id='dropMenu-container'>
@@ -38,10 +45,10 @@ const Shop = () => {
         {/* <div id='dropMenuSelect'> */}
           <ul id='dropMenuUL'> 
 
-            <li  className='li-items brain'  >Brain & Memory</li>
-            <li  className='li-items energy'  >Energy and Stress</li>
-            <li  className='li-items immune'  >Immune Support</li>
-            <li  className='li-items sleep'  >Sleep and Mood</li>
+            <a href="/greene/:brain" className='li-items'  >Brain & Memory</a>
+            <a href="/greene/:energy" className='li-items'  >Energy and Stress</a>
+            <a href="/greene/:immune" className='li-items'  >Immune Support</a>
+            <a href="/greene/:sleep" className='li-items'  >Sleep and Mood</a>
 
           </ul>
           <input id='search-items'></input>

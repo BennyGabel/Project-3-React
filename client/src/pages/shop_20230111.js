@@ -6,29 +6,18 @@ import { useQuery } from '@apollo/client';
 
 
 import { QUERY_ITEMS_ALL } from '../utils/queries';
-import { useParams } from 'react-router-dom';
 
 const Shop = () => {
-  // const {cCategory} = useParams();
 
   const { loading, data } = useQuery(QUERY_ITEMS_ALL);
   
   // const greenes = data?.greenes || [];
   const greenes = data?.greenes    || [];
-  // console.log("greenes", greenes)
-
-  const greeneFilter = greenes;
-
-  // const greeneFilter = greenes.filter(greeneFilter => greeneFilter.category === 'Energy and Stress')   WORK
-  // const greeneFilter = greenes.filter(greeneFilter => greeneFilter.category === 'Sleep and Mood')    WORKS
-  // console.log(greeneFilter)   WORKS
-
-// console.log( "Parameter" + cCategory )
-//   category
-// : 
-// "Brain and Memory"
-
-
+  console.log(greenes)
+//   abc = greenes
+// console.log(abc)
+  // greenes = greenes.fil
+  // "category":"Energy and Stress"
   return (
 <div className='react-container'>
     <div id='dropMenu-container'>
@@ -37,12 +26,10 @@ const Shop = () => {
       
         {/* <div id='dropMenuSelect'> */}
           <ul id='dropMenuUL'> 
-
-            <li  className='li-items brain'  >Brain & Memory</li>
-            <li  className='li-items energy'  >Energy and Stress</li>
-            <li  className='li-items immune'  >Immune Support</li>
-            <li  className='li-items sleep'  >Sleep and Mood</li>
-
+              <li className='li-items'  >Brain & Memory</li>
+              <li className='li-items'  >Energy and Stress</li>
+              <li className='li-items'  >Immune Support</li>
+              <li className='li-items'  >Sleep and Mood</li>
           </ul>
           <input id='search-items'></input>
       {/* </div> */}
@@ -51,7 +38,6 @@ const Shop = () => {
   
     <div className='greene-container'>
 
-{/* {greeneFilter.map((item) => (  */}
      {greenes.map((item) => (
         <div className='greene-item-container'>
           <div key={item.id}>

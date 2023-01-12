@@ -31,7 +31,8 @@ body {
 
 .menuoptions li {
   align-content: center;
-  font-size: 24pt;
+  font-size: 24pt; 
+  /* font-size: 18pt */
 }
 
 .quadrant {
