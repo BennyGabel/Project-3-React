@@ -19,8 +19,8 @@ const typeDefs = gql`
     _id: ID
     email: String
     password: String
-  
   }
+
   type Reviews {
     _id: ID
     comment: String
