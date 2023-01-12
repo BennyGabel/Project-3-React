@@ -17,6 +17,9 @@ const resolvers = {
     allusers: async () => {
       return await Users.find({});
     },
+    getCategory: async (parent, args) => {
+      return await Greene.find(args.id);
+    },
   },
   
   Mutation: {

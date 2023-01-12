@@ -30,7 +30,7 @@ export const QUERY_USERS_ALL = gql`
 
 
 export const QUERY_CATEGORIES = gql`
-  query getCategory ($category: category!){
+  query byCategory ($category: category!){
     greenes(category:$category) {
       _id
       name
@@ -40,6 +40,9 @@ export const QUERY_CATEGORIES = gql`
       itemcode
       inventory
       category
+      comments {
+        comment
+      }
     }
   }
 `;

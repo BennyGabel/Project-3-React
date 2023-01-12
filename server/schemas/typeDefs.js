@@ -32,7 +32,7 @@ const typeDefs = gql`
   type Query {
     greenes: [Greene]
     greene(id:ID!): Greene
-    categories(category:String!):Greene
+    getCategory(category:String!):Greene
     comments: [Reviews]
     allusers:[Users]
     
