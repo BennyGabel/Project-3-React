@@ -1,6 +1,95 @@
+*{
+  /* background-color: rgb(119, 197, 112); */
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #140b03;
+  height: 80pt;
+}
+
+.header h1 {
+  color: #8bbf81;
+  align-content: center;
+}
+
+body {
+  background-color: #98e1a4;
+}
+
+/* .flex-row {
+    display: flex; 
+    /* display: inline-flex; */
+    /* flex-wrap: wrap; */
+  
+.menuoptions, .footer {
+    background-color: rgb(64, 138, 62);
+    display: flex;
+    width: auto;
+    height: 100px;
+}
+
+.menuoptions li {
+  align-content: center;
+  font-size: 24pt; 
+  /* font-size: 18pt */
+}
+
+.quadrant {
+  background-color:#3f3023;
+  display: flex;
+  flex-direction: row;
+  margin:20px auto 20px auto;
+  width: 80%;
+  height: 500px;
+  border: 10px solid rgb(13, 136, 56);
+}
+
+.shopCat1, .shopCat2, .shopCat3, .shopCat4 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin:40px auto 10px auto;
+  width: 45%;
+  height: 80%;
+  border: 5px solid rgb(117, 172, 206);
+}
+
+.shopCat1 {
+  background-image: url("Brain.jpg");
+  /* background-size: cover; */
+  background-size: 100% 100%;
+}
+
+.shopCat2 {
+  background-image: url("Energy.jpg");
+  /* background-size: cover; */
+  background-size: 100% 100%;
+}
+
+.shopCat3 {
+  background-image: url("Sleep.jpg");
+  /* background-size: cover; */
+  background-size: 100% 100%;
+}
+
+.shopCat4 {
+  background-image: url("Immunity.jpg");
+  /* background-size: cover;  */
+   background-size: 100% 100%;
+}
+
+.shopCat1 h2, .shopCat2 h2, .shopCat3 h2, .shopCat4 h2 {
+  background-color: #8bbf81;
+  height: 40pt;
+  align-content: center;
+}
+
+
+/*   
 * {
   /* background-color: rgb(126, 177, 121); */
-}
+
 
 .flex-row {
     display: flex; 
@@ -25,4 +114,32 @@
     width: 33%;
     height: 400px;
     text-align: center;
+}
+
+.footer {
+    height:100px;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Shop Page */
+
+#dropMenu-container {
+  background-color: #b4a190;
+  width: auto;
+  height: 100px;
+}
+
+.greene-item-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.greene-box {
+  background-color: aliceblue;
+  border: 5px solid rgb(0, 58, 13);
+  margin: 15px;
 }

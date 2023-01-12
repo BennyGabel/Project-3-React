@@ -20,6 +20,16 @@ const resolvers = {
     getCategory: async (parent, args) => {
       return await Greene.find(args.category);
     },
+    userId: async(parents, args) => {
+      return await Users.findById(args.id).populate('email');
+   },
+
+    // oneuser: async(parent, {emaild}) => {
+    //    return await Users.findOne({_id:email});
+    // },
+    allusers: async() => {
+      return await Users.find({});
+    }, 
   },
   
   Mutation: {

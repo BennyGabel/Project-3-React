@@ -72,22 +72,7 @@ const Login = () => {
 const handleSignUpSubmit = (e) => {
   e.preventDefault();
 
-
-/*
-
-            <input className='form-input' inputTest='reset' type='text' id='email-signup' placeholder='New Email' onBlur={(e) => validateEmail(e, "Signup")} />
-
-          <span id='emailSignUpMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>    
-
-            <input className='form-input' inputTest='reset' type='password' id='password-signup' placeholder='Create Password' />
-            <input className='form-input' inputTest='reset' type='password' id='password-confirm' placeholder='Confirm Password' />
-
-*/
-
-
-
-  
-     
+    
      var emailsignupEl     = document.getElementById('email-signup').value
      var passwordsignupEl  = document.getElementById('password-signup').value
      var passwordconfirmEl = document.getElementById('password-confirm').value
@@ -189,53 +174,6 @@ const handleSignUpSubmit = (e) => {
 
 
   }
-  //   var placeHldrEmail = userEmail.getAttribute('placeholder');
-  //   var userLbl = document.getElementById('userLabel');
-
-  //   var passLogin = document.getElementById('password-login');
-  //   var passLoginLbl = document.getElementById('pass-label-log');
-  //   var placeHldrPass = passLogin.getAttribute('placeholder');  
-
-  //   var passConfirm = document.getElementById('password-confirm');
-  //   var passConfLbl = document.getElementById('pass-label-conf');
-  //   var placeHldrConf = passConfirm.getAttribute('placeholder'); 
-
-  //   var submitBtn = document.getElementById('submit-button');
-
-
-
-  //   switch (e) {
-  //     case 'login' :  
-
-  //       placeHldrEmail.setAttribute('Enter Email ID : ');
-  //       userLbl.textContent = 'User ID :';
-  //       placeHldrPass.setAttribute('Enter Password');
-  //       passLoginLbl.textContent = 'Password :';
-  //       submitBtn.textContent = 'Login';
-  //       passConfLbl.style.display = 'none';
-  //       break
-  //     case 'signup' :  
-  //      } else { 
-  //       placeHldrEmail.setAttribute('New Email ID :');
-  //       userLbl.textContent = 'Create New ID :';
-  //       placeHldrPass.setAttribute('Create Password');
-  //       passLoginLbl.textContent = 'New Password :';
-  //       submitBtn.textContent = 'Sign Up';
-  //       passConfLbl.style.display = 'flex';
-  //       placeHldrConf.setAttribute = 'Confirm Password';
-
-
-  //       submitBtn.textContent = 'Sign Up';
-
-  //     }
-
-  //   }
-  // }
-
-
-
-
-
 
   // Email Validator
   /* const [emailError, setEmailError] = useState('') */
@@ -250,12 +188,8 @@ const handleSignUpSubmit = (e) => {
         var valemailEl = document.getElementById('emailMessage')
     
         if (validator.isEmail(email)) {
-          // setEmailError('Valid Email :)')
-          // alert('Valid Email :)')
           valemailEl.innerHTML = ''
         } else {
-          // setEmailError('Enter valid Email!')
-          // alert('Please enter valid Email!')
           valemailEl.innerHTML = 'Invalid Email!'
     
         }
@@ -268,42 +202,14 @@ const handleSignUpSubmit = (e) => {
           var valemailEl = document.getElementById('emailSignUpMessage')
       
           if (validator.isEmail(email)) {
-            // setEmailError('Valid Email :)')
-            // alert('Valid Email :)')
             valemailEl.innerHTML = ''
           } else {
-            // setEmailError('Enter valid Email!')
-            // alert('Please enter valid Email!')
             valemailEl.innerHTML = 'Invalid Email!'
       
           }
     
     }
   }
-  // Email Validator
-  // $('.saveBtn').on('click', function() {
-  //   // get nearby values
-  //   var value = $(this)
-  //     .siblings('.description')
-  //     .val();
-  //   var time = $(this)
-  //     .parent()
-  //     .attr('id');
-
-  //   // save in localStorage
-  //   localStorage.setItem(time, value);
-
-  //   // Show notification that item was saved to localStorage by adding class 'show'
-  //   $('.notification').addClass('show');
-
-  //   // Timeout to remove 'show' class after 5 seconds
-  //   setTimeout(function() {
-  //     $('.notification').removeClass('show');
-  //   }, 5000);
-  // });
-
-
-
 
 
 
