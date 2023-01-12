@@ -32,10 +32,10 @@ const Shop = () => {
         <div class="bar2"></div>
         <div class="bar3"></div>
           <ul id='dropMenuUL'> 
-              <li className='li-items'  ><a className='li-items' href='/shop/brainmemory'>Brain & Memory</a></li>
-              <li className='li-items'  ><a className='li-items' href='/shop/energystress'>Energy and Stress</a></li>
-              <li className='li-items'  ><a className='li-items' href='/shop/immunesupport'>Immune Support</a></li>
-              <li className='li-items'  ><a className='li-items' href='/shop/sleepmood'>Sleep and Mood</a></li>
+              <li className='li-items'  ><a className='li-items' href='/greene-brainmemory'>Brain & Memory</a></li>
+              <li className='li-items'  ><a className='li-items' href='/greene-energystress'>Energy and Stress</a></li>
+              <li className='li-items'  ><a className='li-items' href='/greene-immunesupport'>Immune Support</a></li>
+              <li className='li-items'  ><a className='li-items' href='/greene-sleepmood'>Sleep and Mood</a></li>
           </ul>
         </div>
         <div id='searchItems-btn'>
