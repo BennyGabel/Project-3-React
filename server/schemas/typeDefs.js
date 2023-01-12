@@ -12,7 +12,7 @@ const typeDefs = gql`
     itemcode: String
     inventory: Int
     category: String
-    comments: [Reviews]
+    comments: [Reviews]!
   }
 
   type Users {
@@ -21,12 +21,20 @@ const typeDefs = gql`
     password: String
   
   }
+
   type Reviews {
     _id: ID
     comment: String
-    user: Users
+    author: String
+    users: Users
     itemcode: Greene
+    allcomments: [Comment]!
   
+  }
+
+  type Auth {
+    token: ID!
+    user: User
   }
 
   type Query {
@@ -35,11 +43,17 @@ const typeDefs = gql`
     categories(category:String!):Greene
     comments: [Reviews]
     allusers:[Users]
+    oneuser(username: String!): User
     
   }
+  
   type Mutation {
-    addComment(users: String!, comment: String!, itemcode: String!): Reviews
-    addUser(email: String!, password:String!): Users
+    login(email: String!, password: String!): Auth
+    addUser(email: String!, password:String!): Auth
+    addComment(comment: String!, author: String!, itemcode: String!): Reviews
+    addComments(reviewId:ID!, commentTxt: String!, commentAuth: String!, itemCode: String!): Reviews
+    delComment(reviewId:ID!): Reviews
+    delComments(reviewId:ID!, commentId: ID!): Reviews
     updateItems(id:ID!, inventory:Int!, price:Float): Greene
   }
 `;

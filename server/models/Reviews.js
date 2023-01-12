@@ -1,24 +1,43 @@
 const { Schema, model } = require('mongoose');
-// const Review = require('./Review');
 
-// const mongoose = require('mongoose');
-// const connection = require('../../config/connection');
-// const users = require('../seed/users.json');
-// const { Schema, model } = require('mongoose'); //  <==
-
-
-// 2) -------------------   Construct a new instance of the schema class
-// const UsersSchema = new mongoose.Schema(
-const ReviewSchema = new Schema(
-  {
-    // email:     { type: String},
-    comment:   { type: String},
+const ReviewSchema = new Schema({
+    comment: { 
+      type: String, 
+      minlength: 1,
+      maxlength: 280,
+      required: true
+    },
+    author: {
+      type: String,
+      required: true,
+      trim: true
+    },
+    itemcode: {
+      type: String
+    },
     createdAt: { type: Date, default: Date.now },
-    // user:    [{type: Schema.Types.ObjectId, ref: 'Users'}],
-    user:    {type: Schema.Types.ObjectId, ref: 'Users'},
-    itemcode: {type: Schema.Types.ObjectId, ref: 'Greene'}
-  }
-)
+    users:    {type: Schema.Types.ObjectId, ref: 'Users'},
+    itemcodes: {type: Schema.Types.ObjectId, ref: 'Greene'},
+    allcomments: [{
+      commentTxt: {
+          type: String,
+          required: true,
+          minlength: 1,
+          maxlength: 280
+        },
+        commentAuth: {
+          type: String,
+          required: true
+        },
+        itemCode:{
+          type: String
+        },
+        createdAt: {
+          type: Date,
+          default: Date.now,
+        }
+      }]
+  });
 
 const Reviews = model('Reviews', ReviewSchema);
 

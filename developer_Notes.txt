@@ -30,3 +30,59 @@ console.log(emlist.includes('pho@gmail.com'));
 console.log('\n------------\n');
 console.log(emlist.indexOf('pho@gmail.com'));
 console.log('\n------------\n');
+
+MongoDB:
+https://www.mongodb.com/docs/manual/reference/operator/update-array/
+Array Update Operators
+Update Operators:
+
+Name              Description
+$                 Acts as a placeholder to update the first element that matches the query condition.
+$[]               Acts as a placeholder to update all elements in an array for the documents that match the query condition.
+$[<identifier>]   Acts as a placeholder to update all elements that match the arrayFilters condition for the documents that match the query condition.
+$addToSet         Adds elements to an array only if they do not already exist in the set.
+$pop              Removes the first or last item of an array.
+$pull             Removes all array elements that match a specified query.
+$push             Adds an item to an array.
+$pullAll          Removes all matching values from an array.
+
+Update Operator Modifiers
+Name          Description
+$each         Modifies the $push and $addToSet operators to append multiple items for array updates.
+$position     Modifies the $push operator to specify the position in the array to add elements.
+$slice        Modifies the $push operator to limit the size of updated arrays.
+$sort         Modifies the $push operator to reorder documents stored in an array.
+
+$ (update)
+
+$elemMatch
+The $elemMatch operator matches documents that contain an array field with at least one element that matches all the specified query criteria.
+
+{ <field>: { $elemMatch: { <query1>, <query2>, ... } } }
+
+If you specify only a single <query> condition in the 
+$elemMatch expression, and are not using the $not or $ne operators inside of 
+$elemMatch, $elemMatch can be omitted. 
+See Single Query Condition.
+
+Behavior
+- You cannot specify a $where expression in an $elemMatch.
+- You cannot specify a $text query expression in an $elemMatch.
+
+Element Match
+Given the following documents in the scores collection:
+{ _id: 1, results: [ 82, 85, 88 ] }
+{ _id: 2, results: [ 75, 88, 89 ] }
+
+The following query matches only those documents where 
+the results array contains at least one element that is 
+both greater than or equal to 80 and is less than 85:
+
+db.scores.find(
+   { results: { $elemMatch: { $gte: 80, $lt: 85 } } }
+)
+
+The query returns the following document since the 
+element 82 is both greater than or equal to 80 and is 
+less than 85:
+{ "_id" : 1, "results" : [ 82, 85, 88 ] }

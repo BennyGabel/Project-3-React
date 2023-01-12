@@ -26,3 +26,5 @@ function Dogs({ onDogSelected }) {
       </select>
     );
   }
+
+  //reducers docs -  https://reactjs.org/docs/hooks-reference.html#usereducer
