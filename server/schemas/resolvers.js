@@ -13,8 +13,10 @@ const resolvers = {
       },
     comments: async() => {
       return await Reviews.find({}).populate('itemcode');
-    }
-   
+    },
+    allusers: async () => {
+      return await Users.find({});
+    },
   },
   
   Mutation: {
@@ -36,36 +38,3 @@ const resolvers = {
 }
 
 module.exports = resolvers;
-
-
-
-
-// reduceOH: async (parent, {itemcode, inventory}) => {
-//     return Greene.findByIdAndUpdate({ inventory });
-// },
-
-       // getAllUsers: async() => {
-        //     return Users.find().sort({email: 1})
-        // },
-        // getOneUser: async(parent, args) => {
-        //     return Users.findOne({args.user}).
-        // },
-   
-
-
-    // Query: {
-    //     reviews: async() => {
-    //         return Reviews.find().sort({itemcode: 1,createdAt: -1})
-    //     }
-    // },
-    // Query: {
-    //     users: async() => {
-    //         return Users.find().sort({email: 1})
-    //     }
-    // },
-
-    // ***  Don't forget to add a comma in line 8 if another function is added ***
-
-    // thought: async (parent, { thoughtId }) => {
-    //     return Thought.findOne({ _id: thoughtId });
-    //   },    

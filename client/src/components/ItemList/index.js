@@ -25,7 +25,7 @@ const ItemList = ({ itemcode }) => {
                         </div>
                     </div>
                     <div key={item.id}>
-                        <img style={{ width: 250, height: 250 }} src={item.image} className="logo" alt="" />
+                        <img style={{ width: 250, height: 250 }} src={item.image+'.jpg'} className="logo" alt="" />
                     </div>
                 </div>
             )}

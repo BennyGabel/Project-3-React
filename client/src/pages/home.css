@@ -1,9 +1,14 @@
+* {
+  /* background-color: rgb(126, 177, 121); */
+}
+
 .flex-row {
     display: flex; 
+    flex-direction: column;
     /* display: inline-flex; */
     /* flex-wrap: wrap; */
   }
-/*   
+   
 .card {
     
     top: 10px;
@@ -17,7 +22,7 @@
     padding-top: 10px;     
     padding-bottom: 10px;  
     
-    width: 250px;
+    width: 33%;
     height: 400px;
     text-align: center;
-  } */
+}

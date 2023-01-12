@@ -8,6 +8,7 @@ const typeDefs = gql`
     name: String
     brand: String
     price: String
+    image: String
     itemcode: String
     inventory: Int
     category: String
@@ -31,8 +32,10 @@ const typeDefs = gql`
   type Query {
     greenes: [Greene]
     greene(id:ID!): Greene
+    categories(category:String!):Greene
     comments: [Reviews]
- 
+    allusers:[Users]
+    
   }
   type Mutation {
     addComment(users: String!, comment: String!, itemcode: String!): Reviews
