@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar  from './components/navbar';
 import Footer  from './components/footer';
+import Header  from './components/header';
 import Home    from './pages/home';
 import Shop    from './pages/shop';
 import Reviews from './pages/reviews';
@@ -38,6 +39,7 @@ const [pageSelect, setShop] = useState('Reviews')      // ES6
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
+          <Header></Header>
         <Navbar show_screen={pageSelect} set_screen={setShop}/>  
                <Routes>
                   <Route  exact path='/login'   element={<Login/>}/> 

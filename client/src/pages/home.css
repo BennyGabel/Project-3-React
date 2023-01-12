@@ -3,6 +3,16 @@
   box-sizing: border-box;
 }
 
+.header {
+  background-color: #140b03;
+  height: 80pt;
+}
+
+.header h1 {
+  color: #8bbf81;
+  align-content: center;
+}
+
 body {
   background-color: #98e1a4;
 }
@@ -111,17 +121,20 @@ body {
 
 /* Shop Page */
 
-.greene-item-container {
+#dropMenu-container {
+  background-color: #b4a190;
+  width: auto;
+  height: 100px;
+}
 
+.greene-item-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
 .greene-box {
-
   background-color: aliceblue;
   border: 5px solid rgb(0, 58, 13);
   margin: 15px;
-
 }
