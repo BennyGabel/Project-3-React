@@ -21,71 +21,125 @@ const Login = () => {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
 
-    // check if empty then return null
-    // if both are populated 
-    // 
-    // 
-
-    // [bg]  2023.01.11
+    // WORKING!!
     var userEmailEl = document.getElementById('userEmail').value
-    var passwordEl  = document.getElementById('password-login').value
+    var passwordEl = document.getElementById('password-login').value
 
+    var loginMsgEl = document.getElementById('loginMessage')     // ATTENTION!!! This refers to the element, not to the value
 
-
-    // console.log('LOGIN SUBMIT PRESSED!!')
-
-
-    // // const { loading,data } = useQuery(QUERY_USERS_ALL)
-    // console.log('data #2', data)
-    // // const allusers = data?.allusers || [];
-    
-    // console.log('allusers #2', allusers)
-
-    // console.log("*-*-*-*-*-*-*-*")
-
-    // console.log("User's info:"  )
-    // console.log('Email',  userEmailEl)
-    // console.log('Password', passwordEl)
-
-
-
-    // const allusers = data?.allusers || [];
-    
-//     console.log('allusers #2', allusers)
-
-// console.log("user")
-
-// console.log("Type of userEmailEl:", typeof(userEmailEl))
-    
     // let objUser1 = allusers.find(chk => chk.email === 'pho@gmail.com');   // PASSED
-    let objUser  = allusers.find(chk => chk.email == userEmailEl);        // PASSED
-    // console.log(typeof(objUser.email))
-    // console.log(objUser1)
-    // console.log(objUser)
-    // console.log("Type of objUser/email:", typeof(objUser.email))
+    let objUser = allusers.find(chk => chk.email == userEmailEl);        // PASSED
 
-
-    if (typeof(objUser) === 'object') {
-      if (objUser.length === 0) {
-        console.log("Email " + userEmailEl + " is not register as a user")
+    if ((userEmailEl.value) || (passwordEl.value)) {
+      // Evaluates if User's email or user's password are empty      
+      if ((userEmailEl.value) && (passwordEl.value)) {
+        // Evaluates if User's email AND user's password are empty
+        loginMsgEl.innerHTML = 'Please enter user & password information'
+      } else {
+        if (userEmailEl.value) {
+          // Evaluates if User's email is empty
+          loginMsgEl.innerHTML = 'Please enter user email'
         } else {
-          if (passwordEl === objUser.password) {
-            console.log("Correct Password, please processd")
-        } else {
-          console.log("CorrectPassword associated to " + userEmailEl + " is " + objUser.password)
+          // Evaluates if user's password is empty    // passwordEl
+          loginMsgEl.innerHTML = 'Please enter password'
         }
       }
     } else {
-        console.log("Password associated to " + userEmailEl + " is " + objUser.password)
+
+
+      if (typeof (objUser) === 'object') {
+        if (objUser.length === 0) {
+          loginMsgEl.innerHTML = 'Invalid Email!'
+          // console.log("Email " + userEmailEl + " is not register as a user")
+        } else {
+          if (passwordEl === objUser.password) {
+            loginMsgEl.innerHTML = "Correct Password, please processd"
+            // console.log("Correct Password, please processd")
+          } else {
+            loginMsgEl.innerHTML = 'Wrong credentials'
+            // console.log("CorrectPassword associated to " + userEmailEl + " is " + objUser.password)
+          }
+        }
+      } else {
+        loginMsgEl.innerHTML = "User not found!"
+        //         console.log("Password associated to " + userEmailEl + " is " + objUser.password)
+      }
     }
-
-
-
-
 
   }
 
-  // [BG]
+// Signup Submit
+const handleSignUpSubmit = (e) => {
+  e.preventDefault();
+
+
+/*
+
+            <input className='form-input' inputTest='reset' type='text' id='email-signup' placeholder='New Email' onBlur={(e) => validateEmail(e, "Signup")} />
+
+          <span id='emailSignUpMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>    
+
+            <input className='form-input' inputTest='reset' type='password' id='password-signup' placeholder='Create Password' />
+            <input className='form-input' inputTest='reset' type='password' id='password-confirm' placeholder='Confirm Password' />
+
+*/
+
+
+
+  
+     
+     var emailsignupEl     = document.getElementById('email-signup').value
+     var passwordsignupEl  = document.getElementById('password-signup').value
+     var passwordconfirmEl = document.getElementById('password-confirm').value
+
+     var signupMsgEl = document.getElementById('signupMessage')     // ATTENTION!!! This refers to the element, not to the value
+ 
+     // let objUser1 = allusers.find(chk => chk.email === 'pho@gmail.com');   // PASSED
+     let objUser = allusers.find(chk => chk.email == userEmailEl);        // PASSED
+ 
+     if ((userEmailEl.value) || (passwordEl.value)) {
+       // Evaluates if User's email or user's password are empty      
+       if ((userEmailEl.value) && (passwordEl.value)) {
+         // Evaluates if User's email AND user's password are empty
+         loginMsgEl.innerHTML = 'Please enter user & password information'
+       } else {
+         if (userEmailEl.value) {
+           // Evaluates if User's email is empty
+           loginMsgEl.innerHTML = 'Please enter user email'
+         } else {
+           // Evaluates if user's password is empty    // passwordEl
+           loginMsgEl.innerHTML = 'Please enter password'
+         }
+       }
+     } else {
+ 
+ 
+       if (typeof (objUser) === 'object') {
+         if (objUser.length === 0) {
+           loginMsgEl.innerHTML = 'Invalid Email!'
+           // console.log("Email " + userEmailEl + " is not register as a user")
+         } else {
+           if (passwordEl === objUser.password) {
+             loginMsgEl.innerHTML = "Correct Password, please processd"
+             // console.log("Correct Password, please processd")
+           } else {
+             loginMsgEl.innerHTML = 'Wrong credentials'
+             // console.log("CorrectPassword associated to " + userEmailEl + " is " + objUser.password)
+           }
+         }
+       } else {
+         loginMsgEl.innerHTML = "User not found!"
+         //         console.log("Password associated to " + userEmailEl + " is " + objUser.password)
+       }
+     }
+ 
+
+
+
+}
+// ----------
+
+  
   const handleChange = (e) => {
     e.preventDefault();
 
@@ -185,20 +239,45 @@ const Login = () => {
 
   // Email Validator
   /* const [emailError, setEmailError] = useState('') */
-  const validateEmail = (e) => {
-    var email = e.target.value
+  const validateEmail = (e, cFrom) => {
 
-    var valemailEl = document.getElementById('emailMessage')
+    switch (cFrom) {
+      case "Login":
 
-    if (validator.isEmail(email)) {
-      // setEmailError('Valid Email :)')
-      // alert('Valid Email :)')
-      valemailEl.innerHTML = ''
-    } else {
-      // setEmailError('Enter valid Email!')
-      // alert('Please enter valid Email!')
-      valemailEl.innerHTML = 'Invalid Email!'
-
+        var email = e.target.value
+        console.log("cFrom", cFrom)
+    
+        var valemailEl = document.getElementById('emailMessage')
+    
+        if (validator.isEmail(email)) {
+          // setEmailError('Valid Email :)')
+          // alert('Valid Email :)')
+          valemailEl.innerHTML = ''
+        } else {
+          // setEmailError('Enter valid Email!')
+          // alert('Please enter valid Email!')
+          valemailEl.innerHTML = 'Invalid Email!'
+    
+        }
+      
+        case "Signup":
+          // <input className='form-input' inputTest='reset' type='text' id='email-signup' placeholder='New Email' onBlur={(e) => validateEmail(e, "Signup")} />"
+          var email = e.target.value
+          console.log("cFrom", cFrom)
+      
+          var valemailEl = document.getElementById('emailSignUpMessage')
+      
+          if (validator.isEmail(email)) {
+            // setEmailError('Valid Email :)')
+            // alert('Valid Email :)')
+            valemailEl.innerHTML = ''
+          } else {
+            // setEmailError('Enter valid Email!')
+            // alert('Please enter valid Email!')
+            valemailEl.innerHTML = 'Invalid Email!'
+      
+          }
+    
     }
   }
   // Email Validator
@@ -228,40 +307,13 @@ const Login = () => {
 
 
 
-  // [bg] BEG -  ORIGINAL      MOVE THE CODE BELOW 
-  
-  const { loading,data } = useQuery(QUERY_USERS_ALL)
+  // NOTE: The following 3 lines, HAVE TO BE THERE
+  const { loading, data } = useQuery(QUERY_USERS_ALL)
   console.log(data)
   const allusers = data?.allusers || [];
-  
-  // aryAllUsers = allusers
-    // [bg] END -  ORIGINAL
 
 
 
-  /* [bg] BEG - TEST CODE
-   const QUERY_ONE_USER = gql`
-  query Users {
-    allusers {
-      _id
-      email
-      password
-    }
-  }
-`;
-
-  const { loading,data } = useQuery(QUERY_USERS_ALL, {
-    variables: {breed},
-  });
-  [bg] END - TEST CODE */
-
-
-  // console.log(aryAllUsers)
-  // console.log(aryAllUsers['email'].includes('pho@gmail.com'))
-  // console.log(aryAllUsers.type)
-
-
-  
 
   return (
     <div className='react-container'>
@@ -274,8 +326,8 @@ const Login = () => {
         <form className='whole-form' onSubmit={handleLoginSubmit}>
           <div className='main-form'>
             <label htmlFor='id-login'>Email:</label>
-             {/* <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
-            <input className='form-input' inputTest = 'reset' type='text' id='userEmail' placeholder='Enter Email' onBlur={(e) => validateEmail(e)} />
+            {/* <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
+            <input className='form-input' inputTest='reset' type='text' id='userEmail' placeholder='Enter Email' onBlur={(e) => validateEmail(e, "Login")} />
           </div>
           <span id='emailMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>    {/*  , float:left */}
 
@@ -290,16 +342,19 @@ const Login = () => {
           <div className='sign-log-button'>
             <button className='form-button' id='signin-button' type='submit' >login</button>
           </div>
+          <span id='loginMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>
         </form>
       </div>
 
       <div id='input-forms-signup'>
         <h2 className='page-title'>Signup</h2>
-        <form className='whole-form'>
+        <form className='whole-form' onSubmit={handleSignUpSubmit}>
           <div className='main-form'>
             <label htmlFor='email-signup'>Create New ID:</label>
-            <input className='form-input' inputTest='reset' type='text' id='email-signup' placeholder='New Email' />
+            <input className='form-input' inputTest='reset' type='text' id='email-signup' placeholder='New Email' onBlur={(e) => validateEmail(e, "Signup")} />
           </div>
+          <span id='emailSignUpMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>    {/*  , float:left */}
+
           <div className='main-form'>
             <label htmlFor='password-signup'>Password:</label>
             <input className='form-input' inputTest='reset' type='password' id='password-signup' placeholder='Create Password' />
@@ -312,6 +367,7 @@ const Login = () => {
           <div className='sign-log-button'>
             <button className='form-button' id='signup-button' type='submit'>signup</button>
           </div>
+          <span id='signupMessage' style={{ fontWeight: 'bold', color: 'red' }}></span>
         </form>
       </div>
 
