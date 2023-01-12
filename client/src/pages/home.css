@@ -31,7 +31,7 @@ body {
   margin:20px auto 20px auto;
   width: 80%;
   height: 500px;
-  border: 1px solid rgb(255,0,0);
+  border: 10px solid rgb(13, 136, 56);
 }
 
 .shopCat1, .shopCat2, .shopCat3, .shopCat4 {
@@ -41,7 +41,7 @@ body {
   margin:40px auto 10px auto;
   width: 45%;
   height: 80%;
-  border: 1px solid rgb(55, 0, 255);
+  border: 5px solid rgb(117, 172, 206);
 }
 
 .shopCat1 {
@@ -107,4 +107,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+/* Shop Page */
+
+.greene-item-container {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.greene-box {
+
+  background-color: aliceblue;
+  border: 5px solid rgb(0, 58, 13);
+  margin: 15px;
+
 }
