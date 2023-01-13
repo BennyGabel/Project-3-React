@@ -72,7 +72,7 @@ After that, front end Javascript will capture this data and perform a fetch() re
 <strong> LOGIN/SIGNUP PAGE: </strong></br>
 <strong> USER PROFILE: </strong></br>
 
-<strong> The Greene app is deployed through Heroku and can be found <em>[right here](heroku link) </em> </strong>
+<strong> The Greene app is deployed through Heroku and can be found <em>[Git repo ](heroku link) </em> </strong>
 <br></br>
 > ### ___Contacts___
 <p> This is the first official release of The Greene's web application. Please stay tuned for The Greene 2.0 and if you have any suggestions in regards to improving app performance or if you would like to collaborate, feel free to find us on GitHub or LinkedIn:</p>
@@ -80,7 +80,9 @@ After that, front end Javascript will capture this data and perform a fetch() re
 | 🔧 Developer  | 🔗 GitHub                                                 | 🔗 LinkedIn                                  |
 |:--------------:|:---------------------------------------------------------:|:-----------------------------------------:|
 | Alexandria     | [awinters81](https://github.com/awinters81)               | [Alexandria Winters](https://www.linkedin.com/in/alexandria-winters-98199a23a/)
-| Benny      | [username](GitHub Link)                   | [Benny Gabel](LinkedIn Link)
+| Benny      | [username](https://github.com/BennyGabel/
+)                   | [Benny Gabel](https://www.linkedin.com/in/benny-gabel-a66392a/
+)
 | Pho        | [username](GitHub Link)   | [Pho Phimvongsa](LinkedIn Link)
 | Matthew        | [P1100s7](https://github.com/P1100s7)                     | [Matthew Parness](https://www.linkedin.com/in/matthew-parness)
 
