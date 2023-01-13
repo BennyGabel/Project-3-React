@@ -16,15 +16,14 @@ const UserSchema = new Schema({
     usercomments: [{ type: Schema.Types.ObjectId, ref: 'Reviews' }],
     lastAccessed: { type: Date, default: Date.now }
   });
-
 // --------------------------------------------------------------------
-
 UserSchema.pre('save', async function (next) {  //------------------------- pre-save middleware to create password
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds); //------- bcrypt function hash(data: string | Buffer, saltOrRounds: string | number): Promise<string>;   
   }
   next();
+
 });
 
 UserSchema.methods.isCorrectPassword = async function (password) { //------ compare passwords
@@ -32,5 +31,4 @@ UserSchema.methods.isCorrectPassword = async function (password) { //------ comp
 };
 
 const Users = model('Users', UserSchema);
-
 module.exports = Users;
