@@ -43,7 +43,7 @@
 <br>
 
 <strong> PRODUCTS PAGE: </strong></br>
-![](/assets/screenshots/shop.jpg
+![](/assets/screenshots/shop.jpg?raw=true)
 
 <br>
 
