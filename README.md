@@ -37,22 +37,23 @@
 <p>Here you can see a few screenshots from our web application, such as: </p>
 
 <strong> HOMEPAGE: </strong></br>
-<img src=>
+![](/assets/screenshots/home.jpg?raw=true)
+/assets/screenshots/shop.jpg
 
 <br>
 
 <strong> PRODUCTS PAGE: </strong></br>
-<img src=>
+![](/assets/screenshots/shop.jpg
 
 <br>
 
 <strong> LOGIN/SIGNUP PAGE: </strong></br>
-<img src=>
+![](/assets/screenshots/login_signup.jpg?raw=true)
 
 <br>
 
 <strong> REVIEWS PAGE: </strong></br>
-<img src=>
+![](/assets/screenshots/reviews.jpg?raw=true)
 
 <br>
 <br>
