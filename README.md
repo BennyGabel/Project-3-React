@@ -38,7 +38,6 @@
 
 <strong> HOMEPAGE: </strong></br>
 ![](/assets/screenshots/home.jpg?raw=true)
-/assets/screenshots/shop.jpg
 
 <br>
 
