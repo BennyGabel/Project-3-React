@@ -7,6 +7,24 @@ body{
   margin: 5px auto 5px auto;
 }
 
+.review-forms{
+  margin: 20px auto 20px auto;
+  display:block;
+  width:600px;
+}
+#username, #productsearch, .greene-text-box{
+  margin: 5px auto 5px auto;
+  width: 75%;
+}
+.greene-text-box{
+  height: 80px;
+}
+#submit-btn{
+  width: 130px;
+  height: 35px;
+  font-size: 26px;
+}
+
 #root{
 
   text-align: center;
