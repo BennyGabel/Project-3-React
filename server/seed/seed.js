@@ -24,26 +24,3 @@ db.once('open', async () => {
 });
 
 
-
-
-
-  //  await Greene.insertMany(inventory);
-  //  await Users.insertMany(userData);
-  //  await Reviews.insertMany(reviewsData);
-// const randGrn = Greene.findOne({});
-// const randUsr = Users.findOne({});
-
-//  for (grnItem of greenes) {
-//     // randomly add each class to a school
-//     const tempRev = greenes[itemcode];
-
-
-//     // randomly add a professor to each class
-//     const tempUsers = users[Math.floor(Math.random() * users.length)];
-//     tempRev.comment = tempUsers._id;
-//     await rv.save();
-
-//     // reference class on professor model, too
-//     tempUsers.comment.push(rv._id);
-//     await tempUsers.save();
-//   }
