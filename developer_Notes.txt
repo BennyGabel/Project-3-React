@@ -1,0 +1,32 @@
+2023.01.03 Re-structuring to client\server
+
+var emdict= {
+  'pho@gmail.com':'WhatsApp',
+  'bennyl@gmail.com': 'WhatsApp',
+  'alex@gmail.com': 'WhatsApp',
+  'matt@gmail.com': 'WhatsApp',
+}
+var emlist = ['bennyl@gmail.com','alex@gmail.com', 'WhatsApp','matt@gmail.com','pho@gmail.com'];
+
+var emdictKeys = Object.keys(emdict);
+
+for (var [k,v] of Object.entries(emdict)){
+  console.log('k,v as variables :', k,v);
+  console.log('\n------------\n');
+  console.log( 'keys k:',k, 'values: ',emdict[k]);
+
+}
+
+console.log('\n------------\n');
+
+console.log('keys of dictionary: ',emdictKeys);
+console.log('list of emails: ', emlist);
+
+console.log('\n------------\n');
+
+console.log(emdictKeys.includes('pho@gmail.com'));
+console.log(emlist.includes('pho@gmail.com'));
+
+console.log('\n------------\n');
+console.log(emlist.indexOf('pho@gmail.com'));
+console.log('\n------------\n');
