@@ -4,13 +4,12 @@ const { User, Product, Category } = require('../models');
 db.once('open', async () => {
   await Category.deleteMany();
 
-  
   const categories = await Category.insertMany([
-    { name: 'Brain and Memory' },
-    { name: 'Energy and Stress' },
-    { name: 'Immune Support' },
-    { name: 'Sleep and Mood' }
-    // { name: 'All' }
+    { name: 'Brain and Memory',  image: 'Brain.jpg'},
+    { name: 'Energy and Stress', image: 'Energy.jpg'},
+    { name: 'Immune Support',    image: 'Immunity.jpg'},
+    { name: 'Sleep and Mood',    image: 'Sleep.jpg'}
+  
   ]);
 
   console.log('categories seeded');
@@ -56,21 +55,9 @@ db.once('open', async () => {
     {name:"Stress Relief",description:"Genexa",image:"stress_relief_homeopath.jpg","price":16.48,quantity:3,category:categories[3]._id},    
   ]);
 
-  console.log('products seeded');
+  console.log('Greene Shop seeded');
 
   await User.deleteMany();
-
-  // await User.create({
-  //   firstName: 'Pamela',
-  //   lastName: 'Washington',
-  //   email: 'pamela@testmail.com',
-  //   password: 'password12345',
-  //   orders: [
-  //     {
-  //       products: [products[0]._id, products[0]._id, products[1]._id]
-  //     }
-  //   ]
-  // });
 
   let currUsers =[
     { fName: "Pho", lName:"Phimvongsa",email: "pho@gmail.com", pass: "WhatsApp" },
@@ -79,6 +66,7 @@ db.once('open', async () => {
     { fName: "Matt", lName:"Parsons",email: "matt@gmail.com", pass: "WhatsApp" }
   ];
   for(var elem of currUsers){
+    // await User.create({
     await User.create({
       firstName: elem.fName,
       lastName: elem.lName,
@@ -86,19 +74,6 @@ db.once('open', async () => {
       password: elem.pass
     });
   }
-
-    // let currUsers =[
-    //   { firstName: "Pho", lastName:"Phimvongsa",email: "pho@gmail.com", password: "WhatsApp" },
-    //   { firstName: "Benny", lastName:"Gabel", email: "bennyl@gmail.com", password: "WhatsApp" },
-    //   { firstName: "Alex", lastName:"Winters", email:"alex@gmail.com", password: "WhatsApp"  },
-    //   { firstName: "Matt", lastName:"Parsons", email: "matt@gmail.com", password: "WhatsApp" }
-    // ];
-
-    // await User.insertMany(currUsers);
-
-
-
-  
 
 
   console.log('users seeded');

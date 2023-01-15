@@ -25,10 +25,7 @@ const httpLink = createHttpLink({
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : '',
-    },
+    headers: { ...headers, authorization: token ? `Bearer ${token}` : '' },
   };
 });
 
@@ -45,13 +42,13 @@ function App() {
           <StoreProvider>
             <Nav />
             <Routes>
-              <Route  path="/"                 element={<Home />}          />
-              <Route  path="/login"            element={<Login />}         />
-              <Route  path="/signup"           element={<Signup />}        />
-              <Route  path="/success"          element={<Success />}       />
-              <Route  path="/orderHistory"     element={<OrderHistory />}  />
-              <Route  path="/products/:id"     element={<Detail />}        />
-              <Route  path="*"                 element={<NoMatch />}       />
+              <Route  path="/"             element={< Home />} />
+              <Route  path="/login"        element={< Login />} />
+              <Route  path="/signup"       element={< Signup />} />
+              <Route  path="/success"      element={< Success />} />
+              <Route  path="/orderHistory" element={< OrderHistory />} />
+              <Route  path="/products/:id" element={< Detail />} />
+              <Route  path="*"             element={< NoMatch />} />
             </Routes>
           </StoreProvider>
         </div>
