@@ -1,9 +1,22 @@
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import validator from 'validator'
 import { useQuery } from '@apollo/client';
 // import 
 import { QUERY_USERS_ALL } from '../utils/queries';
+
+
+// BEG - From Class
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom';
+
+
+import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
+// END - From Class
+
 
 
 
@@ -55,6 +68,14 @@ const Login = () => {
           if (passwordEl === objUser.password) {
             loginMsgEl.innerHTML = "Correct Password, please processd"
             // console.log("Correct Password, please processd")
+            // User should be sent to SHOP
+
+
+  Location: `http://whateverhostthiswillbe:8675/${newRoom}`
+
+
+
+
           } else {
             loginMsgEl.innerHTML = 'Wrong credentials'
             // console.log("CorrectPassword associated to " + userEmailEl + " is " + objUser.password)
@@ -106,6 +127,7 @@ const handleSignUpSubmit = (e) => {
          } else {
            if (passwordEl === objUser.password) {
              loginMsgEl.innerHTML = "Correct Password, please processd"
+
              // console.log("Correct Password, please processd")
            } else {
              loginMsgEl.innerHTML = 'Wrong credentials'

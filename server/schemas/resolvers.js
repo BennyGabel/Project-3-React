@@ -1,4 +1,6 @@
+const { AuthenticationError } = require('apollo-server-express');
 const { Greene, Reviews, Users }= require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -20,23 +22,59 @@ const resolvers = {
     getCategory: async (parent, args) => {
       return await Greene.find(args.category);
     },
+    users: async () => {
+      return Users.find()
+        .select('-__v -password')
+    },
+
   },
   
   Mutation: {
-    addComment: async (parent, {comment, user, itemcode}) => {
-      return await Reviews.create({comment, user, itemcode})
+
+    addUser: async (parent, args) => {
+      const user = await Users.create(args);
+      const token = signToken(user);
+
+      return { token, user };
     },
-    addUser: async (parent, {email, password}) => {
-      return await Users.create({email, password})
-    },
-    updateItems: async (parent, { id, inventory, price }) => {
-      return await Greene.findOneAndUpdate(
-        {_id: id}, 
-        {inventory},
-        {price},
-        {new: true}
-      );
+    login: async (parent, { email, password }) => {
+      const user = await Users.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+      return { token, user };
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //   updateItems: async (parent, { id, inventory, price }) => {
+  //     return await Greene.findOneAndUpdate(
+  //       {_id: id}, 
+  //       {inventory},
+  //       {price},
+  //       {new: true}
+  //     );
+  //   }
   }
 }
 
