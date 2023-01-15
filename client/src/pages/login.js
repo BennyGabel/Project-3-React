@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 
 
 import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+import Auth from '../../../server/utils/auth';
 // END - From Class
 
 
