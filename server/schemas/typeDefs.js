@@ -29,6 +29,11 @@ const typeDefs = gql`
   
   }
 
+  type Auth {
+    token: ID
+    user: Users
+  }
+
   type Query {
     greenes: [Greene]
     greene(id:ID!): Greene
@@ -41,6 +46,7 @@ const typeDefs = gql`
     addComment(users: String!, comment: String!, itemcode: String!): Reviews
     addUser(email: String!, password:String!): Users
     updateItems(id:ID!, inventory:Int!, price:Float): Greene
+    login(email: String!, password: String!): Auth
   }
 `;
 
