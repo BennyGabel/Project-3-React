@@ -1,9 +1,9 @@
 import React  from 'react';
-import Auth from "../../utils/auth";
+import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
-    if (Auth.loggedIn()) {
+    // if (Auth.loggedIn()) {
         return (
             <div>
                 <ul className="menuoptions">
@@ -15,20 +15,17 @@ const Navbar = (props) => {
 
             </div>
         )
-    } else {
-        return (
-            <ul className="flex-row">
-            <li className="mx-1">
-              <Link to="/login">
-                Login
-              </Link>
-            </li>
-          </ul>
+    // } else {
+    //     return (
+    //       <ul className="menuoptions">
+    //         <li> <Link to="/login"> Login </Link> </li>
+    //       </ul>
 
-            )  
+    //         )  
 
 
-    } 
+    // } 
+    
 }
 
 // Export Function 

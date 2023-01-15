@@ -1,33 +1,12 @@
-import React, { Component }  from 'react';
-// import ITEMS from './../components/data/items.json';
+import React  from 'react';
 import { useQuery } from '@apollo/client';
-
-// import ItemList from '../components/ItemList';
-
-
 import { QUERY_ITEMS_ALL } from '../utils/queries';
-import { useParams } from 'react-router-dom';
 
 const Shop = () => {
-  // const {cCategory} = useParams();
-
   const { loading, data } = useQuery(QUERY_ITEMS_ALL);
   
-  // const greenes = data?.greenes || [];
   const greenes = data?.greenes    || [];
-  // console.log("greenes", greenes)
-
-  const greeneFilter = greenes;
-
-  // const greeneFilter = greenes.filter(greeneFilter => greeneFilter.category === 'Energy and Stress')   WORK
-  // const greeneFilter = greenes.filter(greeneFilter => greeneFilter.category === 'Sleep and Mood')    WORKS
-  // console.log(greeneFilter)   WORKS
-
-// console.log( "Parameter" + cCategory )
-//   category
-// : 
-// "Brain and Memory"
-
+console.log(greenes);
 
   return (
 <div className='react-container'>
@@ -51,7 +30,8 @@ const Shop = () => {
   
     <div className='greene-container'>
 
-{/* {greeneFilter.map((item) => (  */}
+    {loading ? (<div>Loading...</div>) : (
+      <div>
      {greenes.map((item) => (
         <div className='greene-item-container'>
           <div key={item.id}>
@@ -71,6 +51,9 @@ const Shop = () => {
             ))
           }
         </div> 
+          )
+        }
+        </div>
     </div>
     )
 }

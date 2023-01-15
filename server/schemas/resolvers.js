@@ -1,6 +1,6 @@
-const { AuthenticationError } = require('apollo-server-express');
+// const { AuthenticationError } = require('apollo-server-express');
 const { Greene, Reviews, Users }= require('../models');
-const { signToken } = require('../utils/auth');
+// const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -21,49 +21,35 @@ const resolvers = {
     },
     getCategory: async (parent, args) => {
       return await Greene.find(args.category);
-    },
-    users: async () => {
-      return Users.find()
-        .select('-__v -password')
-    },
+    }
 
   },
   
   Mutation: {
 
-    addUser: async (parent, args) => {
-      const user = await Users.create(args);
-      const token = signToken(user);
+    // addUser: async (parent, args) => {
+    //   const user = await Users.create(args);
+    //   const token = signToken(user);
 
-      return { token, user };
-    },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    //   return { token, user };
+    // }    ,
+    // login: async (parent, { email, password }) => {
+    //   const user = await Users.findOne({ email });
 
-      if (!user) {
-        throw new AuthenticationError('Incorrect credentials');
-      }
+    //   if (!user) {
+    //     throw new AuthenticationError('Incorrect credentials');
+    //   }
 
-      const correctPw = await user.isCorrectPassword(password);
+    //   const correctPw = await user.isCorrectPassword(password);
 
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
-      }
+    //   if (!correctPw) {
+    //     throw new AuthenticationError('Incorrect credentials');
+    //   }
 
-      const token = signToken(user);
+    //   const token = signToken(user);
 
-      return { token, user };
-    }
-
-
-
-
-
-
-
-
-
-
+    //   return { token, user };
+    // }
 
 
 

@@ -1,3 +1,4 @@
+import React  from 'react';
 import './home.css';
 
 const Home = () => {
@@ -5,7 +6,6 @@ const Home = () => {
   return (
     <main>
       <div className="flex-row justify-center">
-        {/* {loading ? (<div>Loading...</div>) : ( */}
           
           <div className='quadrant'>
             <div className='shopCat1'>
