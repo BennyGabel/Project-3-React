@@ -3,14 +3,15 @@
   --secondary: rgb(129, 232, 143);
   --tertiary: rgb(50, 137, 66);
   --light: rgb(250, 250, 250);
-  --dark: rgb(181, 100, 192);
+  --dark: rgb(158, 47, 173);
   --error: rgb(175, 62, 34);
   --spacing-one: calc(1rem * 0.5);
-  --spacing-two: calc(1rem);
+  --spacing-two: calc(1rem); 
 }
 
 * {
   box-sizing: border-box;
+
 }
 
 html,body {
@@ -22,55 +23,47 @@ body {
   padding: 0;
   font-family: 'Calibri';
   font-weight: 400;
-  line-height: 1.5;
+  line-height: normal;
   font-size: 16px;
   color: var(--dark);
+}
+
+
+
+.category-container{
+z-index: -1;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'MV Boli';
   font-weight: 500;
   margin: 5px 0;
-  line-height: 1.25;
-}
 
-
-
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
 }
 
 .nav-link{
   list-style: none;
   margin: 0px 20px 0px 20px;
 }
-#greene-logo{
-  color:rgb(175, 255, 228);
+#greene-logo, header a {
+  
+  color:rgb(240, 255, 250);
 }
 #greene-logo:hover, .nav-link:hover{
   text-shadow: 4px 4px 7px rgb(63, 255, 89);
-  transition: all .10s ease-in-out;
+  color: rgb(255,255,255);
+  transition: all .25s ease-in-out;
 }
+#hdr-spacer{
+  display:block;
+  height: 175px;
+  width:100%;
 
+}
 .category-menu{
-  margin: 120px auto 30px auto;
+  margin: 40px auto 40px auto;
+  justify-content: space-evenly;
+
 }
 
 p {
@@ -84,12 +77,9 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  text-decoration: none;
-  transition: all .25s ease-in-out;
-}
+
 .nav-header{
-  display: inline-flex;
+  display: flex;
   width:100%;
   height: 120px;
   background-image: linear-gradient(180deg, rgb(10,10,10) 0%, rgb(5, 112, 30)50%,  rgb(135, 228, 157) 100%);
@@ -98,10 +88,6 @@ a:hover {
 
 }
 
-
-header a {
-  color: var(--light);
-}
 
 button {
   font-size: 1.25rem;
@@ -112,15 +98,15 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
-  /* background-color: var(--secondary); */
-  background-image: linear-gradient(180deg, rgb(13, 47, 20) 0%, rgb(5, 112, 30)25%,  rgb(135, 228, 157) 50%, rgb(5, 112, 30) 75%, rgb(13, 47, 20) 100%);
+  margin: 4px 8px 4px 8px;
+  background-image: linear-gradient(180deg, rgb(13, 47, 20) 0%, rgb(5, 112, 30)25%,  rgb(68, 163, 90) 50%, rgb(5, 112, 30) 75%, rgb(13, 47, 20) 100%);
 }
 
 .category-button{
+
   display:flex;
   flex-wrap: nowrap;
-  flex-direction:column;
+  flex-direction:row;
 }
 
 button{
@@ -182,7 +168,25 @@ input:focus {
 
 }
 
+h1 {
+  font-size: 2.5rem;
+}
 
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
 .nav-header h1, .nav-header nav{
   margin: auto 0px auto 0px;
 }
@@ -196,18 +200,19 @@ input:focus {
 }
 
 .mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
-  text-decoration: none;
+  margin-right: var(--spacing-one); 
+ margin-left: var(--spacing-one);
+
 }
 
 .mx-2 {
   margin-right: var(--spacing-two);
   margin-left: var(--spacing-two);
+
 }
 
 .my-1 {
-  margin-top: var(--spacing-one);
+  margin-top:  var(--spacing-one);
   margin-bottom: var(--spacing-one);
 }
 
