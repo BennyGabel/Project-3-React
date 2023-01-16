@@ -42,14 +42,18 @@ function CategoryMenu() {
   return (
     <div>
       <h2>Choose a Category:</h2>
+      <div  className = "flex-row">
       {categories.map((item) => (
-      <div key={item._id}>
-      <button  onClick={() => {handleClick(item._id)}} > {item.name} </button> 
-      <img  style={{ width: 350, height:200 }} src={item.image} className="four-categories" alt="" />
+      <div className="card px-1 py-1" key={item._id}>
+      <button  onClick={() => {handleClick(item._id)}} > 
+      {item.name} 
+      <img  style={{ width: 350, height:200 }} src={'/images/'+item.image} className="four-categories" alt="" />
+      </button> 
+      
       
       </div>
       ))}
-
+    </div>
     </div>
   );
 }
