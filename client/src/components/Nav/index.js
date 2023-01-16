@@ -8,23 +8,23 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1"> <Link to="/orderHistory"> Order History </Link> </li>
-          <li className="mx-1"> <a href="/" onClick={() => Auth.logout()}> Logout </a> </li>
+          <li className="nav-link"> <Link to="/orderHistory"> Order History </Link> </li>
+          <li className="nav-link"> <a href="/" onClick={() => Auth.logout()}> Logout </a> </li>
         </ul>
       );
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1"> <Link to="/signup"> Signup </Link> </li>
-          <li className="mx-1"> <Link to="/login">  Login  </Link> </li>
+          <li className="nav-link"> <Link to="/signup"> Signup </Link> </li>
+          <li className="nav-link"> <Link to="/login">  Login  </Link> </li>
         </ul>
       );
     }
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1> <Link to="/"> <span role="img" aria-label="shopping bag">🛍️</span> Greene Shop </Link> </h1>
+    <header className="nav-header">
+      <h1 id="greene-logo"> <Link to="/"> Greene Shop </Link> </h1>
       <nav> {showNavigation()} </nav>
     </header>
   );

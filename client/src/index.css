@@ -1,8 +1,8 @@
 :root {
-  --primary: #05701e;
-  --secondary: #81e88f;
-  --tertiary: #328942;
-  --light: #fafafa;
+  --primary: rgb(5, 112, 30);
+  --secondary: rgb(129, 232, 143);
+  --tertiary: rgb(50, 137, 66);
+  --light: rgb(250, 250, 250);
   --dark: rgb(181, 100, 192);
   --error: rgb(175, 62, 34);
   --spacing-one: calc(1rem * 0.5);
@@ -28,12 +28,7 @@ body {
   color: var(--dark);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   /* font-family: 'Rubik', sans-serif; */
   font-family: 'MV Boli';
   font-weight: 500;
@@ -42,7 +37,7 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -61,10 +56,16 @@ h5 {
   font-size: 1.25rem;
 }
 
-h6 {
-  font-size: 1rem;
+.nav-link{
+  list-style: none;
+  margin: 0px 20px 0px 20px;
 }
-
+#greene-logo{
+  color:rgb(175, 255, 228);
+}
+#greene-logo:hover{
+  text-shadow: 4px 4px 7px rgb(63, 255, 89);
+}
 p {
   font-size: 1.1rem;
   margin-top: 0;
@@ -77,12 +78,16 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+}
+.nav-header{
+  display: inline-flex;
+  width:100%;
+  height: 120px;
+  /* background: rgb(5, 112, 30); */
+  background-image: linear-gradient(180deg, rgb(10,10,10) 0%, rgb(5, 112, 30)50%,  rgb(135, 228, 157) 100%);
 }
 
-header {
-  background: var(--primary);
-}
 
 header a {
   color: var(--light);
@@ -146,6 +151,11 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
 
+}
+
+
+.nav-header h1, .nav-header nav{
+  margin: auto 0px auto 0px;
 }
 
 .space-between {
