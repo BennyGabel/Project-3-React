@@ -1,34 +1,41 @@
 .cart {
   position: fixed;
+  color: rgb(111, 9, 7);
   top: 0;
   right: 0;
+  font-size: 24px;
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
-  background-color: var(--light);
+  background-color: rgba(136, 195, 189, 0.773);
   overflow: auto;
   padding: .5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
   border-bottom-left-radius: .5rem;
+  cursor: pointer;
 }
 
 .cart h2 {
-  font-size: 1.5rem;
-  border-bottom: 1px solid var(--dark);
+  font-size: 2rem;
+  color: rgb(7, 111, 42);
+  border-bottom: 1px solid rgba(97, 26, 26, 0.85);
   padding-bottom: .5rem;
   margin: 1rem 0;
 }
 
 .cart .close {
+  font-size: 28px;
   position: absolute;
   top: .5rem;
   right: .5rem;
   cursor: pointer;
-  color: var(--tertiary);
+  color: rgb(220, 1, 1);
+  cursor: pointer;
 }
 
 .cart .close:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .cart-closed {
@@ -37,20 +44,25 @@
   right: 1%;
   font-size: 2rem;
   cursor: pointer;
-  background-color: var(--secondary);
+  background-color: rgba(54, 209, 158, 0.658);
   border-radius: 50%;
   padding: .25rem;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .cart-closed:hover {
   transform: rotate(8deg);
+  cursor: pointer;
 }
-
+.cart-closed span{
+  cursor: pointer;
+}
 .cart img {
   width: 70px;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .cart input {
