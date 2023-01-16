@@ -32,6 +32,7 @@ function Signup(props) {
 
   return (
     <div className="container my-1">
+       <div id='hdr-spacer'></div>
       <Link to="/login">← Go to Login</Link>
 
       <h2>Signup</h2>

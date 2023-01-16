@@ -40,11 +40,13 @@ function CategoryMenu() {
 
   
   return (
-    <div>
-      <h2>Choose a Category:</h2>
+    <div className="category-container">
+      <div id='hdr-spacer'></div>
+      <h2>Greene's Four Core Categories</h2>
       <div  className = "flex-row category-menu">
+      
       {categories.map((item) => (
-      <div className="card px-1 py-1  category-button" key={item._id}>
+      <div className="card  category-button" key={item._id}>
         <button onClick={() => {handleClick(item._id)}} style={{width:'100%'}}  > 
           {item.name} 
           <img  className="category-image" style={{ width: 350, height:200 }} src={'/images/'+item.image}  alt="" />

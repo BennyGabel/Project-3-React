@@ -72,6 +72,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
+       <div id='hdr-spacer'></div>
       <div className="close" onClick={toggleCart}>
         [close]
       </div>

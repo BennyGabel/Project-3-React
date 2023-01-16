@@ -38,6 +38,9 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="flex-row">
+
+  <div id='hdr-spacer'></div>
+
       <div>
         <img
           src={`/images/${item.image}`}
