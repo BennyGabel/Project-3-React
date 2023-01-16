@@ -67,10 +67,12 @@
 
 <br>
 <strong> SLEEP AND MOOD: </strong></br>
+
 ![](/assets/screenshots/6_Sleep_and_Mood.jpg?raw=true)
 
 <br>
 <strong> CART: </strong></br>
+
 ![](/assets/screenshots/7_Cart.jpg?raw=true)
 
 <br>
