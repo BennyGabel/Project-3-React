@@ -45,7 +45,7 @@ function CategoryMenu() {
       <div  className = "flex-row">
       {categories.map((item) => (
       <div className="card px-1 py-1" key={item._id}>
-      <button  onClick={() => {handleClick(item._id)}} > 
+      <button onClick={() => {handleClick(item._id)}} style={{width:'100%'}}  > 
       {item.name} 
       <img  style={{ width: 350, height:200 }} src={'/images/'+item.image} className="four-categories" alt="" />
       </button> 
