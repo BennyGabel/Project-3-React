@@ -36,25 +36,49 @@
 > ### ___Screenshots and Link___
 <p>Here you can see a few screenshots from our web application, such as: </p>
 
-<strong> HOMEPAGE: </strong></br>
-![](/assets/screenshots/home.jpg?raw=true)
+<strong> HOME PAGE: </strong></br>
+![](/assets/screenshots/0 GreeneShop.jpg?raw=true)
 
 <br>
 
-<strong> PRODUCTS PAGE: </strong></br>
-![](/assets/screenshots/shop.jpg?raw=true)
+
+<strong> LOGIN PAGE: </strong></br>
+![](/assets/screenshots/1 Login.jpg?raw=true)
 
 <br>
 
-<strong> LOGIN/SIGNUP PAGE: </strong></br>
-![](/assets/screenshots/login_signup.jpg?raw=true)
+<strong> ALL PRODUCTS: </strong></br>
+![](/assets/screenshots/2 All Products.jpg?raw=true)
 
 <br>
 
-<strong> REVIEWS PAGE: </strong></br>
-![](/assets/screenshots/reviews.jpg?raw=true)
+<strong> BRAIN AND MEMORY: </strong></br>
+![](/assets/screenshots/3 Brain and Memory.jpg?raw=true)
 
 <br>
+
+<strong> ENERGY AND STRESS: </strong></br>
+![](/assets/screenshots/4 Energy and Stress.jpg?raw=true)
+
+<br>
+
+<strong> IMMUNE SUPPORT: </strong></br>
+![](/assets/screenshots/5 immune support.jpg?raw=true)
+
+<br>
+<strong> SLEEP AND MOOD: </strong></br>
+![](/assets/screenshots/6 Sleep and Mood.jpg?raw=true)
+
+<br>
+<strong> CART: </strong></br>
+![](/assets/screenshots/7 Cart.jpg?raw=true)
+
+<br>
+
+<strong> Walkthrough Video </strong></br>
+[](https://www.youtube.com/watch?v=qnEmxUYdai4)
+
+
 <br>
 
 <strong> [Our Repo]()
