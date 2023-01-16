@@ -83,8 +83,14 @@
 
 <br>
 
-<strong> (https://github.com/BennyGabel/Project-3-React)
+<strong> Github Repository </strong>
+(https://github.com/BennyGabel/Project-3-React)
 
+<br>
+
+
+<strong> Project's presentation </strong>
+(https://docs.google.com/presentation/d/1jxs9BXHPjfrphVLDI99C_nhEO2kLPICpCOOTKhZoCUg/edit#slide=id.g1c165dc7349_0_268)
 
 
 <br></br>
@@ -95,7 +101,7 @@
 |:--------------:|:---------------------------------------------------------:|:-----------------------------------------:|
 | Alexandria     | [awinters81](https://github.com/awinters81)               | [Alexandria Winters](https://www.linkedin.com/in/alexandria-winters-98199a23a/)
 | Benny      | [BennyGabel](https://github.com/BennyGabel/)                   | [Benny Gabel](https://www.linkedin.com/in/benny-gabel-a66392a/)
-| Pho        | [LetsGitPhysical](https://github.com/LetsGitPhysical)   | [Pho Phimvongsa](Coming Soon)
+| Pho        | [LetsGitPhysical](https://github.com/LetsGitPhysical)   | 
 | Matthew        | [P1100s7](https://github.com/P1100s7)                     | [Matthew Parness](https://www.linkedin.com/in/matthew-parness)
 
 ### Thank you for visiting!
