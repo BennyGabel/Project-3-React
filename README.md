@@ -37,51 +37,51 @@
 <p>Here you can see a few screenshots from our web application, such as: </p>
 
 <strong> HOME PAGE: </strong></br>
-![](/assets/screenshots/0 GreeneShop.jpg?raw=true)
+![](/assets/screenshots/0_GreeneShop.jpg?raw=true)
 
 <br>
 
 
 <strong> LOGIN PAGE: </strong></br>
-![](/assets/screenshots/1 Login.jpg?raw=true)
+![](/assets/screenshots/1_Login.jpg?raw=true)
 
 <br>
 
 <strong> ALL PRODUCTS: </strong></br>
-![](/assets/screenshots/2 All Products.jpg?raw=true)
+![](/assets/screenshots/2_All_Products.jpg?raw=true)
 
 <br>
 
 <strong> BRAIN AND MEMORY: </strong></br>
-![](/assets/screenshots/3 Brain and Memory.jpg?raw=true)
+![](/assets/screenshots/3_Brain_and_Memory.jpg?raw=true)
 
 <br>
 
 <strong> ENERGY AND STRESS: </strong></br>
-![](/assets/screenshots/4 Energy and Stress.jpg?raw=true)
+![](/assets/screenshots/4_Energy_and_Stress.jpg?raw=true)
 
 <br>
 
 <strong> IMMUNE SUPPORT: </strong></br>
-![](/assets/screenshots/5 immune support.jpg?raw=true)
+![](/assets/screenshots/5_immune_support.jpg?raw=true)
 
 <br>
 <strong> SLEEP AND MOOD: </strong></br>
-![](/assets/screenshots/6 Sleep and Mood.jpg?raw=true)
+![](/assets/screenshots/6_Sleep_and_Mood.jpg?raw=true)
 
 <br>
 <strong> CART: </strong></br>
-![](/assets/screenshots/7 Cart.jpg?raw=true)
+![](/assets/screenshots/7_Cart.jpg?raw=true)
 
 <br>
 
 <strong> Walkthrough Video </strong></br>
-[](https://www.youtube.com/watch?v=qnEmxUYdai4)
+(https://www.youtube.com/watch?v=qnEmxUYdai4)
 
 
 <br>
 
-<strong> [Our Repo]()
+<strong> (https://github.com/BennyGabel/Project-3-React)
 <strong> The Greene app is deployed through Heroku and can be found <em>[here](heroku link) </em> </strong>
 
 
