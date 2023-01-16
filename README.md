@@ -84,7 +84,7 @@
 <br>
 
 <strong> (https://github.com/BennyGabel/Project-3-React)
-<strong> The Greene app is deployed through Heroku and can be found <em>[here](heroku link) </em> </strong>
+
 
 
 <br></br>
